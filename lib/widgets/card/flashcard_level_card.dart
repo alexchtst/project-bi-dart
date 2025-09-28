@@ -1,23 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:syndo/screen/quiz.dart';
+import 'package:syndo/screen/quiz_word.dart';
 import 'package:syndo/utils/data.dart';
 
 class FlashcardLevelCard extends StatelessWidget {
-  const FlashcardLevelCard({super.key, required this.level});
+  const FlashcardLevelCard({super.key, required this.level, required this.word});
 
   final String level;
+  final bool word;
 
   @override
   Widget build(BuildContext context) {
-
     final List<Map<String, dynamic>> questions = questionData.sublist(1, 3);
+    final List<Map<String, dynamic>> questionwords = questionWordData;
 
     return InkWell(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => Quiz(questbundle: questions)),
-        );
+        if (word) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => QuizWord(questbundle: questionwords),
+            ),
+          );
+        } else {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => Quiz(questbundle: questions),
+            ),
+          );
+        }
       },
 
       child: Stack(
@@ -51,7 +64,9 @@ class FlashcardLevelCard extends StatelessWidget {
             top: MediaQuery.of(context).size.width * 0.042,
             child: Container(
               width: MediaQuery.of(context).size.width * 0.15,
-              padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.009),
+              padding: EdgeInsets.all(
+                MediaQuery.of(context).size.width * 0.009,
+              ),
               decoration: BoxDecoration(
                 color: const Color.fromARGB(255, 212, 129, 10),
                 borderRadius: BorderRadius.circular(10.0),

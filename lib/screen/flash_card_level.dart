@@ -3,7 +3,9 @@ import 'package:syndo/widgets/button/navigation_button.dart';
 import 'package:syndo/widgets/card/flashcard_level_card.dart';
 
 class FlashCardLevel extends StatefulWidget {
-  const FlashCardLevel({super.key});
+  const FlashCardLevel({super.key, this.word = true});
+
+  final bool word;
 
   @override
   State<FlashCardLevel> createState() => _FlashCardLevelState();
@@ -39,21 +41,21 @@ class _FlashCardLevelState extends State<FlashCardLevel> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                FlashcardLevelCard(level: "1",),
+                FlashcardLevelCard(level: "1", word: widget.word,),
                 SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                FlashcardLevelCard(level: "2",),
+                FlashcardLevelCard(level: "2", word: widget.word,),
                 SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                FlashcardLevelCard(level: "3",),
+                FlashcardLevelCard(level: "3", word: widget.word,),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                FlashcardLevelCard(level: "4",),
+                FlashcardLevelCard(level: "4", word: widget.word,),
                 SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                FlashcardLevelCard(level: "5",),
+                FlashcardLevelCard(level: "5", word: widget.word,),
                 SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                FlashcardLevelCard(level: "6",),
+                FlashcardLevelCard(level: "6", word: widget.word,),
               ],
             ),
           ],

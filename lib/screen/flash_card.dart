@@ -3,7 +3,9 @@ import 'package:syndo/screen/flash_card_level.dart';
 
 // flash card
 class FlashCardComp extends StatelessWidget {
-  const FlashCardComp({super.key});
+  const FlashCardComp({super.key, this.word = true});
+
+  final bool word;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class FlashCardComp extends StatelessWidget {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => FlashCardLevel()),
+            MaterialPageRoute(builder: (context) => FlashCardLevel(word: word,)),
           );
         },
         child: Column(

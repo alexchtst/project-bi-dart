@@ -125,6 +125,29 @@ flutter:
     - assets/images/zcard.png
     - assets/images/zquestcard.png
     - assets/images/skor-board.png
+    
+    - assets/images/akucard.png
+    - assets/images/akuquestcard.png
+    - assets/images/becakcard.png
+    - assets/images/becakquestcard.png
+    - assets/images/biscard.png
+    - assets/images/bisquestcard.png
+    - assets/images/hallocard.png
+    - assets/images/halloquestcard.png
+    - assets/images/maucard.png
+    - assets/images/mauquestcard.png
+    - assets/images/mobilcard.png
+    - assets/images/mobilquestcard.png
+    - assets/images/namacard.png
+    - assets/images/namaquestcard.png
+    - assets/images/salamkenalcard.png
+    - assets/images/salamkenalquestcard.png
+    - assets/images/senangcard.png
+    - assets/images/senangquestcard.png
+    - assets/images/terimakasihcard.png
+    - assets/images/terimakasihquestcard.png
+    - assets/images/tolongcard.png
+    - assets/images/tolongquestcard.png
 
     - assets/audio/BACKSOUND_GAMELAN_INDONESIAN_MUSIC_ETHNIC_CULTURE.mp3
 

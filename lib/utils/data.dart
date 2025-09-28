@@ -154,5 +154,74 @@ final List<Map<String, dynamic>> questionData = [
     "answerindex": 3,
     "questImageQuestion": "assets/images/zquestcard.png",
     "questImageAnswer": "assets/images/zcard.png",
-  }
+  },
+];
+
+final List<Map<String, dynamic>> questionWordData = [
+  {
+    "options": ["AKU", "TOLONG", "SENANG"],
+    "answerindex": 0,
+    "questImageQuestion": "assets/images/akuquestcard.png",
+    "questImageAnswer": "assets/images/akucard.png",
+  },
+  {
+    "options": ["MAU", "TERIMA KASIH", "BECAK"],
+    "answerindex": 1,
+    "questImageQuestion": "assets/images/terimakasihquestcard.png",
+    "questImageAnswer": "assets/images/terimakasihcard.png",
+  },
+  {
+    "options": ["SALAM KENAL", "NAMA", "HALLO"],
+    "answerindex": 2,
+    "questImageQuestion": "assets/images/halloquestcard.png",
+    "questImageAnswer": "assets/images/hallocard.png",
+  },
+  {
+    "options": ["AKU", "TOLONG", "SENANG"],
+    "answerindex": 2,
+    "questImageQuestion": "assets/images/senangquestcard.png",
+    "questImageAnswer": "assets/images/senangcard.png",
+  },
+  {
+    "options": ["BUS", "MOBIL", "TIDAK MAU"],
+    "answerindex": 0,
+    "questImageQuestion": "assets/images/bisquestcard.png",
+    "questImageAnswer": "assets/images/biscard.png",
+  },
+  {
+    "options": ["AKU", "TOLONG", "SENANG"],
+    "answerindex": 1,
+    "questImageQuestion": "assets/images/tolongquestcard.png",
+    "questImageAnswer": "assets/images/tolongcard.png",
+  },
+  {
+    "options": ["SALAM KENAL", "NAMA", "HALLO"],
+    "answerindex": 0,
+    "questImageQuestion": "assets/images/senangquestcard.png",
+    "questImageAnswer": "assets/images/senangcard.png",
+  },
+  {
+    "options": ["MAU", "TERIMA KASIH", "BECAK"],
+    "answerindex": 2,
+    "questImageQuestion": "assets/images/terimakasihquestcard.png",
+    "questImageAnswer": "assets/images/terimakasihcard.png",
+  },
+  {
+    "options": ["SALAM KENAL", "NAMA", "HALLO"],
+    "answerindex": 1,
+    "questImageQuestion": "assets/images/namaquestcard.png",
+    "questImageAnswer": "assets/images/namacard.png",
+  },
+  {
+    "options": ["BUS", "MOBIL", "TIDAK MAU"],
+    "answerindex": 1,
+    "questImageQuestion": "assets/images/mobilquestcard.png",
+    "questImageAnswer": "assets/images/mobilcard.png",
+  },
+  {
+    "options": ["MAU", "TERIMA KASIH", "BECAK"],
+    "answerindex": 0,
+    "questImageQuestion": "assets/images/mauquestcard.png",
+    "questImageAnswer": "assets/images/maucard.png",
+  },
 ];

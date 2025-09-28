@@ -42,9 +42,10 @@ class FillBlank extends StatelessWidget {
 }
 
 class QuizFlashCard extends StatefulWidget {
-  const QuizFlashCard({super.key, this.nogesture = false});
+  const QuizFlashCard({super.key, this.nogesture = false, this.word = false});
 
   final bool nogesture;
+  final bool word;
 
   @override
   State<QuizFlashCard> createState() => _QuizFlashCardState();
@@ -70,7 +71,7 @@ class _QuizFlashCardState extends State<QuizFlashCard> {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [FlashCardComp(), FillBlank()],
+              children: [FlashCardComp(word: widget.word,), FillBlank()],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

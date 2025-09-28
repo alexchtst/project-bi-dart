@@ -55,7 +55,7 @@ class MyApp extends StatelessWidget {
           '/study': (context) => StudyScreen(),
           '/memo-evaluation': (context) => MemoEvaluation(),
           '/quiz-flash-card-alphabet': (context) => QuizFlashCard(),
-          '/quiz-flash-card-word': (context) => QuizFlashCard(nogesture: false),
+          '/quiz-flash-card-word': (context) => QuizFlashCard(nogesture: false, word: true,),
           '/alpahbet-word': (context) => AlphabetWord(),
           '/chat-bot' : (context) => ChatBot(),
         },
