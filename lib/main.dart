@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:syndo/screen/alphabet_word.dart';
 import 'package:syndo/screen/chat_bot.dart';
 import 'package:syndo/screen/coin_screen.dart';
+import 'package:syndo/screen/gesture_prediction.dart';
 import 'package:syndo/screen/home_screen.dart';
 import 'package:syndo/screen/memo_evaluation.dart';
 import 'package:syndo/screen/mode_screen.dart';
@@ -58,6 +59,7 @@ class MyApp extends StatelessWidget {
           '/quiz-flash-card-word': (context) => QuizFlashCard(nogesture: false, word: true,),
           '/alpahbet-word': (context) => AlphabetWord(),
           '/chat-bot' : (context) => ChatBot(),
+          '/gesture-detection' : (context) => GesturePrediction(),
         },
       ),
     );

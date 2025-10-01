@@ -17,8 +17,9 @@ dependencies:
   provider: ^6.1.1
   shared_preferences: ^2.2.2
   video_player: ^2.10.0
-
-
+  camera: ^0.11.0+2
+  http: ^1.1.0
+  permission_handler: ^11.3.0
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +72,7 @@ flutter:
     - assets/images/bersekolah.png
     - assets/images/bersosial.png
     - assets/images/flashcard-bg.png
+    - assets/images/chat-background.png
     
     - assets/images/acard.png
     - assets/images/aquestcard.png
