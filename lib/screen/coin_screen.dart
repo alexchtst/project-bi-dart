@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:syndo/widgets/card/coin_card.dart';
+import 'package:provider/provider.dart';
+import 'package:syndo/utils/game_data.dart';
 
 class CoinScreen extends StatefulWidget {
   const CoinScreen({super.key});
@@ -11,6 +13,9 @@ class CoinScreen extends StatefulWidget {
 class _CoinScreenState extends State<CoinScreen> {
   @override
   Widget build(BuildContext context) {
+    final gameData = Provider.of<GameData>(context);
+    final int balance = gameData.coinBalance;
+
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
@@ -44,7 +49,7 @@ class _CoinScreenState extends State<CoinScreen> {
                         fit: BoxFit.cover,
                       ),
                       Text(
-                        '0',
+                        '$balance',
                         style: TextStyle(
                           fontFamily: 'Baloo',
                           fontSize: 18.0,

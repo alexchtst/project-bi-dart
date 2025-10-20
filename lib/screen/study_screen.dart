@@ -4,7 +4,8 @@ import 'package:syndo/widgets/card/study_card.dart';
 import 'package:syndo/utils/data_service.dart';
 
 class StudyScreen extends StatefulWidget {
-  const StudyScreen({super.key});
+  final String region;
+  const StudyScreen({super.key, required this.region});
 
   @override
   State<StudyScreen> createState() => _StudyScreenState();
@@ -34,7 +35,7 @@ class _StudyScreenState extends State<StudyScreen> {
                 mainAxisSize: MainAxisSize.max,
                 children:
                     dataProvider
-                        .getCardsByType('studyoption')
+                        .getCardsByTypeAndRegion('studyoption', widget.region)
                         .map(
                           (item) => StudyCard(
                             locked: item.isLocked,

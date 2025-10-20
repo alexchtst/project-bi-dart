@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:syndo/screen/scan.dart';
+import 'package:syndo/widgets/card/study_bystory.dart';
 
 class StudyCard extends StatelessWidget {
   const StudyCard({
@@ -22,37 +23,48 @@ class StudyCard extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          Container(
-            width: MediaQuery.of(context).size.width * 0.3,
-            height: MediaQuery.of(context).size.width * 0.32,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20.0),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Image.asset(imagePath.toString(), fit: BoxFit.fitWidth),
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.2,
-                  padding: EdgeInsets.all(5.0),
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: Colors.green.shade700,
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                  child: Text(
-                    title.toString(),
-                    style: TextStyle(
-                      fontFamily: 'Chewy',
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15.0,
+          InkWell(
+            onTap:
+                () => {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => StudyBystory(name: title),
                     ),
                   ),
-                ),
-              ],
+                },
+            child: Container(
+              width: MediaQuery.of(context).size.width * 0.3,
+              height: MediaQuery.of(context).size.width * 0.32,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20.0),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Image.asset(imagePath.toString(), fit: BoxFit.fitWidth),
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.2,
+                    padding: EdgeInsets.all(5.0),
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: Colors.green.shade700,
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: Text(
+                      title.toString(),
+                      style: TextStyle(
+                        fontFamily: 'Chewy',
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           // Overlay if locked

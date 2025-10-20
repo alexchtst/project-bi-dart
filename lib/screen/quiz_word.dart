@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:syndo/utils/game_data.dart';
 import 'package:syndo/widgets/quiz/quizwordboard.dart';
 
 class QuizWord extends StatefulWidget {
@@ -12,7 +14,7 @@ class QuizWord extends StatefulWidget {
 class _QuizWordState extends State<QuizWord> {
   int counter = 0;
   int currentQuest = 0;
-  bool isAnswered = false; // untuk kontrol status soal
+  bool isAnswered = false;
 
   void updateCounter(int userAns, int ans) {
     if (!isAnswered) {
@@ -40,9 +42,9 @@ class _QuizWordState extends State<QuizWord> {
   }
 
   @override
-  @override
   Widget build(BuildContext context) {
     final bool quizSelesai = currentQuest >= widget.questbundle.length;
+    final gameData = Provider.of<GameData>(context);
 
     return Scaffold(
       body: Container(
@@ -144,11 +146,9 @@ class _QuizWordState extends State<QuizWord> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                    setState(() {
-                                      counter = 0;
-                                      currentQuest = 0;
-                                      isAnswered = false;
-                                    });
+                                    gameData.levelUpWord();
+                                    gameData.addCoins(counter * 10);
+                                    Navigator.pop(context);
                                   },
                                   child: Container(
                                     padding: EdgeInsets.all(
@@ -162,7 +162,7 @@ class _QuizWordState extends State<QuizWord> {
                                       ),
                                     ),
                                     child: Text(
-                                      "Ulangi Quiz",
+                                      "Selesai",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'Baloo',

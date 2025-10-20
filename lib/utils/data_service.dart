@@ -11,12 +11,14 @@ class DataCard {
   final String name;
   final bool isLocked;
   final String imgPath;
+  final String region;
 
   DataCard({
     required this.type,
     required this.name,
     required this.isLocked,
     required this.imgPath,
+    required this.region,
   });
 
   // Convert to JSON
@@ -36,6 +38,7 @@ class DataCard {
       name: json['name'] ?? '',
       isLocked: json['isLocked'] ?? false,
       imgPath: json['imgPath'] ?? '',
+      region: json['region'] ?? '',
     );
   }
 
@@ -45,12 +48,14 @@ class DataCard {
     String? name,
     bool? isLocked,
     String? imgPath,
+    String? region,
   }) {
     return DataCard(
       type: type ?? this.type,
       name: name ?? this.name,
       isLocked: isLocked ?? this.isLocked,
       imgPath: imgPath ?? this.imgPath,
+      region: region ?? this.region,
     );
   }
 
@@ -179,6 +184,16 @@ class DataProvider extends ChangeNotifier {
     return _studyCards.where((card) => card.type == type).toList();
   }
 
+  List<DataCard> getCardsByRegion(String region) {
+    return _studyCards.where((card) => card.region == region).toList();
+  }
+
+  List<DataCard> getCardsByTypeAndRegion(String type, String region) {
+    return _studyCards
+        .where((card) => card.type == type && card.region == region)
+        .toList();
+  }
+
   // Initialize and load data
   Future<void> init() async {
     await loadStudyCards();
@@ -209,50 +224,79 @@ class DataProvider extends ChangeNotifier {
       DataCard(
         type: "scanoption",
         name: "Sumatera",
-        isLocked: true,
+        isLocked: false,
         imgPath: 'assets/images/sumatera.png',
+        region: "smtr",
       ),
       DataCard(
         type: "scanoption",
         name: "Bali",
         isLocked: false,
         imgPath: 'assets/images/bali.png',
+        region: "bali",
       ),
       DataCard(
         type: "scanoption",
         name: "Jawa",
         isLocked: false,
         imgPath: 'assets/images/jawa.png',
+        region: "jawa",
       ),
       DataCard(
         type: "studyoption",
-        name: "BERKULINER",
+        name: "PASAR",
         isLocked: false,
         imgPath: 'assets/images/berkuliner.png',
+        region: "jawa",
       ),
       DataCard(
         type: "studyoption",
-        name: "BERWISATA",
+        name: "MUSEUM",
         isLocked: false,
         imgPath: 'assets/images/berwisata.png',
+        region: "jawa",
       ),
       DataCard(
         type: "studyoption",
-        name: "BERMAIN",
+        name: "BERWISATA JAKARTA",
         isLocked: false,
         imgPath: 'assets/images/bermain.png',
+        region: "jawa",
       ),
       DataCard(
         type: "studyoption",
-        name: "BERSOSIAL",
-        isLocked: true,
+        name: "WARUNG SATE",
+        isLocked: false,
         imgPath: 'assets/images/bersosial.png',
+        region: "bali",
       ),
       DataCard(
         type: "studyoption",
-        name: "SEKOLAH",
-        isLocked: true,
+        name: "PANTAI",
+        isLocked: false,
         imgPath: 'assets/images/bersekolah.png',
+        region: "bali",
+      ),
+      DataCard(
+        type: "studyoption",
+        name: "MONKEY FOREST",
+        isLocked: false,
+        imgPath: 'assets/images/bersekolah.png',
+        region: "bali",
+      ),
+      DataCard(
+        type: "studyoption",
+        name: "TAMAN",
+        isLocked: false,
+        imgPath: 'assets/images/bersekolah.png',
+        region: "smtr",
+      ),
+      DataCard(
+        type: "studyoption",
+        name: "ZOO",
+        isLocked: false,
+        imgPath: 'assets/images/bersekolah.png',
+        region: "smtr",
       ),
     ];
 
@@ -280,7 +324,7 @@ class DataProvider extends ChangeNotifier {
     } catch (e) {
       _setError('Failed to add study card: $e');
     } finally {
-      _setLoading(false);
+      _setLoading(true);
     }
   }
 

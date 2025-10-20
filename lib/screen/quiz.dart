@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:syndo/utils/game_data.dart';
 import 'package:syndo/widgets/quiz/quizboard.dart';
 
 class Quiz extends StatefulWidget {
@@ -40,9 +42,9 @@ class _QuizState extends State<Quiz> {
   }
 
   @override
-  @override
   Widget build(BuildContext context) {
     final bool quizSelesai = currentQuest >= widget.questbundle.length;
+    final gameData = Provider.of<GameData>(context);
 
     return Scaffold(
       body: Container(
@@ -144,11 +146,9 @@ class _QuizState extends State<Quiz> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                    setState(() {
-                                      counter = 0;
-                                      currentQuest = 0;
-                                      isAnswered = false;
-                                    });
+                                    Navigator.pop(context);
+                                    gameData.levelUpAlphabet();
+                                    gameData.addCoins(counter * 10);
                                   },
                                   child: Container(
                                     padding: EdgeInsets.all(
@@ -162,7 +162,7 @@ class _QuizState extends State<Quiz> {
                                       ),
                                     ),
                                     child: Text(
-                                      "Ulangi Quiz",
+                                      "Selesai",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontFamily: 'Baloo',

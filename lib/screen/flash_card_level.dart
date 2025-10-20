@@ -13,7 +13,7 @@ class FlashCardLevel extends StatefulWidget {
 
 class _FlashCardLevelState extends State<FlashCardLevel> {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {    
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
@@ -41,21 +41,21 @@ class _FlashCardLevelState extends State<FlashCardLevel> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                FlashcardLevelCard(level: "1", word: widget.word,),
+                FlashcardLevelCard(level: 1, word: widget.word,),
                 SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                FlashcardLevelCard(level: "2", word: widget.word,),
+                FlashcardLevelCard(level: 2, word: widget.word,),
                 SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                FlashcardLevelCard(level: "3", word: widget.word,),
+                FlashcardLevelCard(level: 3, word: widget.word,),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                FlashcardLevelCard(level: "4", word: widget.word,),
+                FlashcardLevelCard(level: 4, word: widget.word,),
                 SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                FlashcardLevelCard(level: "5", word: widget.word,),
+                FlashcardLevelCard(level: 5, word: widget.word,),
                 SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                FlashcardLevelCard(level: "6", word: widget.word,),
+                FlashcardLevelCard(level: 6, word: widget.word,),
               ],
             ),
           ],

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:syndo/screen/scan.dart';
+import 'package:syndo/screen/study_screen.dart';
 
 class ScanCard extends StatefulWidget {
   const ScanCard({
@@ -9,11 +10,13 @@ class ScanCard extends StatefulWidget {
     required this.locked,
     required this.imgPath,
     required this.name,
+    required this.region
   });
 
   final bool locked;
   final String imgPath;
   final String name;
+  final String region;
 
   @override
   State<ScanCard> createState() => _ScanCardState();
@@ -31,7 +34,10 @@ class _ScanCardState extends State<ScanCard> {
         children: [
           GestureDetector(
             onTap: () {
-              Navigator.pushNamed(context, '/study');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => StudyScreen(region: widget.region,)),
+              );
             },
             child: Container(
               padding: EdgeInsets.all(20.0),

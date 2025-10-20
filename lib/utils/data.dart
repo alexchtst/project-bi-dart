@@ -225,3 +225,26 @@ final List<Map<String, dynamic>> questionWordData = [
     "questImageAnswer": "assets/images/maucard.png",
   },
 ];
+
+final List<Map<String, dynamic>> storyPasarScenes = [
+  {
+    "actor": "Arin",
+    "dialog": "Hmmm.... apa ya transportasi yang ada didekat sini?",
+    "quiz": [],
+    "arinImg": "assets/images/arin-type-1.png",
+    "gielImg": "",
+    "showImage": "",
+  },
+  {
+    "actor": "Arin",
+    "dialog": "oh!, disitu ada becak",
+    "quiz": [
+      {"image": "assets/images/opt-hallo.png", "ans": false},
+      {"image": "assets/images/opt-becakstory.png", "ans": true},
+      {"image": "assets/images/opt-namastory.png", "ans": false},
+    ],
+    "arinImg": "assets/images/arin-type-1.png",
+    "gielImg": "",
+    "showImage": "assets/images/opt-namastory.png",
+  },
+];

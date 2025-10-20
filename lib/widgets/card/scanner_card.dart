@@ -1,17 +1,20 @@
-import 'package:flutter/material.dart';
-import 'package:syndo/screen/scan.dart';
+// ignore_for_file: use_build_context_synchronously
 
-// scanner card
+import 'package:flutter/material.dart';
+import 'package:syndo/screen/scan_flash_card.dart';
+
 class ScannerCard extends StatelessWidget {
   const ScannerCard({super.key});
 
   @override
   Widget build(BuildContext context) {
+
     return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Scan(name: 'SCAN-CARD-TEST')),
+          // ganti bagian ini menjadi 
+          MaterialPageRoute(builder: (context) => ScanFlashCard(name: 'SCAN-CARD-TEST')),
         );
       },
       child: Container(

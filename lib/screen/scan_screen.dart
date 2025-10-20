@@ -58,6 +58,7 @@ class _ScanScreenState extends State<ScanScreen> {
                                   locked: item.isLocked,
                                   imgPath: item.imgPath,
                                   name: item.name,
+                                  region: item.region,
                                 ),
                               )
                               .toList(),

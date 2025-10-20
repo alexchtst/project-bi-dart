@@ -12,9 +12,10 @@ import 'package:syndo/screen/play_screen.dart';
 import 'package:syndo/screen/quiz_flash_card.dart';
 import 'package:syndo/screen/scan.dart';
 import 'package:syndo/screen/scan_screen.dart';
-import 'package:syndo/screen/study_screen.dart';
 import 'package:syndo/utils/audio_service.dart';
 import 'package:syndo/utils/data_service.dart';
+import 'package:syndo/utils/game_data.dart';
+import 'package:syndo/utils/scanner_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -39,8 +40,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => DataProvider()..init(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => DataProvider()..resetToDefault()),
+        ChangeNotifierProvider(create: (context) => ScannerProvider()),
+        ChangeNotifierProvider(create: (context) => GameData()),
+      ],
       child: MaterialApp(
         title: 'Lingo Hands',
         debugShowCheckedModeBanner: false,
@@ -53,7 +58,7 @@ class MyApp extends StatelessWidget {
           '/mode': (context) => ModeScreen(),
           '/scan': (context) => ScanScreen(),
           '/coins': (context) => CoinScreen(),
-          '/study': (context) => StudyScreen(),
+          // '/study': (context) => StudyScreen(),
           '/memo-evaluation': (context) => MemoEvaluation(),
           '/quiz-flash-card-alphabet': (context) => QuizFlashCard(),
           '/quiz-flash-card-word': (context) => QuizFlashCard(nogesture: false, word: true,),

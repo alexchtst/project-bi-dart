@@ -4,19 +4,21 @@ import 'package:flutter/material.dart';
 import 'package:qr_code_scanner_plus/qr_code_scanner_plus.dart';
 import 'dart:io';
 import 'package:provider/provider.dart';
+import 'package:syndo/screen/media_display_screen.dart';
 import 'package:syndo/screen/tutorial.dart';
 import 'package:syndo/utils/data_service.dart';
+import 'package:syndo/utils/scanner_provider.dart';
 
-class Scan extends StatefulWidget {
-  const Scan({super.key, required this.name});
+class ScanFlashCard extends StatefulWidget {
+  const ScanFlashCard({super.key, required this.name});
 
   final String name;
 
   @override
-  State<Scan> createState() => _ScanState();
+  State<ScanFlashCard> createState() => _ScanState();
 }
 
-class _ScanState extends State<Scan> {
+class _ScanState extends State<ScanFlashCard> {
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
   QRViewController? controller;
   String? result;
@@ -182,8 +184,11 @@ class _ScanState extends State<Scan> {
     );
   }
 
-  void _processQRResult(String code) {
-    final dataProvider = Provider.of<DataProvider>(context, listen: false);      
+  void _processQRResult(String code) async {
+    final scannerProvider = Provider.of<ScannerProvider>(
+      context,
+      listen: false,
+    );
 
     if (code.contains('SCAN-KARTU')) {
       ScaffoldMessenger.of(
@@ -193,47 +198,20 @@ class _ScanState extends State<Scan> {
         context,
         MaterialPageRoute(builder: (context) => const Tutorial()),
       );
+    } else {
+      scannerProvider.setDetectedCode(code);
+      await scannerProvider.fetchMedia();
+
+      if (!scannerProvider.hasError) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => const MediaDisplayScreen()),
+        );
       } else {
-      dataProvider
-          .unlockCard(code.toString())
-          .then((success) {
-            if (success) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text('Card "$code" berhasil di-unlock!'),
-                  backgroundColor: Colors.green,
-                ),
-              );
-              Navigator.of(context).pop();
-            } else {
-              if (dataProvider.error!.isNotEmpty) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text('Error: ${dataProvider.error}'),
-                    backgroundColor: Colors.red,
-                  ),
-                );
-              } else {
-                // Card tidak ditemukan atau sudah unlocked
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(
-                      'Card "$code" tidak ditemukan atau sudah unlocked',
-                    ),
-                    backgroundColor: Colors.orange,
-                  ),
-                );
-              }
-            }
-          })
-          .catchError((error) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                content: Text('Gagal unlock card'),
-                backgroundColor: Colors.red,
-              ),
-            );
-          });
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Gagal memuat media dari QR')),
+        );
+      }
     }
   }
 

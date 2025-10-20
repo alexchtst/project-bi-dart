@@ -149,7 +149,40 @@ flutter:
     - assets/images/terimakasihcard.png
     - assets/images/terimakasihquestcard.png
     - assets/images/tolongcard.png
-    - assets/images/tolongquestcard.png
+
+    - assets/images/bg-berwisata-jakarta.png
+    - assets/images/bg-monkey-forest.png
+    - assets/images/bg-museum.png
+    - assets/images/bg-pantai.png
+    - assets/images/bg-pasar.png
+    - assets/images/bg-taman.png
+    - assets/images/bg-warung-sate.png
+    - assets/images/bg-zoo.png
+
+    - assets/images/giel-type-1.png
+    - assets/images/giel-type-2.png
+    - assets/images/giel-type-3.png
+    - assets/images/arin-type-1.png
+    - assets/images/arin-type-2.png
+    
+    - assets/images/story-mode-dialog.png
+    - assets/images/bg-pilihan-ganda.png
+
+    - assets/images/opt-akustory.png
+    - assets/images/opt-becakstory.png
+    - assets/images/opt-akustory.png
+    - assets/images/opt-busstory.png
+    - assets/images/opt-halo.png
+    - assets/images/opt-kapalstory.png
+    - assets/images/opt-maafstory.png
+    - assets/images/opt-mobilstory.png
+    - assets/images/opt-namastory.png
+    - assets/images/opt-pesawatstory.png
+    - assets/images/opt-salamkenalstory.png
+    - assets/images/opt-terimakasihstory.png
+    - assets/images/opt-tidakmaustory.png
+    - assets/images/opt-tolongstory.png
+    - assets/images/opt-trukjawaban.png
 
     - assets/audio/BACKSOUND_GAMELAN_INDONESIAN_MUSIC_ETHNIC_CULTURE.mp3
 
