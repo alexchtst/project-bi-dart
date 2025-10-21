@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:syndo/widgets/button/navigation_button.dart';
-import 'package:syndo/widgets/card/flashcard_level_card.dart';
+import 'package:syndo/widgets/card/fillintheblank_level_card.dart';
 
-class FlashCardLevel extends StatefulWidget {
-  const FlashCardLevel({super.key, this.word = true});
-
+class FillintheblankLevel extends StatefulWidget {
+  const FillintheblankLevel({super.key, required this.word});
   final bool word;
 
   @override
-  State<FlashCardLevel> createState() => _FlashCardLevelState();
+  State<FillintheblankLevel> createState() =>
+      _FillintheblankLevelState();
 }
 
-class _FlashCardLevelState extends State<FlashCardLevel> {
+class _FillintheblankLevelState extends State<FillintheblankLevel> {
   @override
-  Widget build(BuildContext context) {    
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
         padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.01),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/flashcard-bg.png'),
+            image: AssetImage('assets/images/fillin.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -41,21 +41,21 @@ class _FlashCardLevelState extends State<FlashCardLevel> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                FlashcardLevelCard(level: 1, word: widget.word,),
+                FillintheblankLevelCard(level: 1, word: widget.word),
                 SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                FlashcardLevelCard(level: 2, word: widget.word,),
+                FillintheblankLevelCard(level: 2, word: widget.word),
                 SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                FlashcardLevelCard(level: 3, word: widget.word,),
+                FillintheblankLevelCard(level: 3, word: widget.word),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                FlashcardLevelCard(level: 4, word: widget.word,),
+                FillintheblankLevelCard(level: 4, word: widget.word),
                 SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                FlashcardLevelCard(level: 5, word: widget.word,),
+                FillintheblankLevelCard(level: 5, word: widget.word),
                 SizedBox(width: MediaQuery.of(context).size.width * 0.05),
-                FlashcardLevelCard(level: 6, word: widget.word,),
+                FillintheblankLevelCard(level: 6, word: widget.word),
               ],
             ),
           ],
@@ -63,5 +63,4 @@ class _FlashCardLevelState extends State<FlashCardLevel> {
       ),
     );
   }
-
 }

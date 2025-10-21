@@ -3,19 +3,18 @@ import 'package:provider/provider.dart';
 import 'package:syndo/utils/game_data.dart';
 import 'package:syndo/widgets/quiz/quizwordboard.dart';
 
-class QuizWord extends StatefulWidget {
-  const QuizWord({super.key, required this.questbundle});
+class FillintheblankWord extends StatefulWidget {
+  const FillintheblankWord({super.key, required this.questbundle});
   final List<Map<String, dynamic>> questbundle;
 
   @override
-  State<QuizWord> createState() => _QuizWordState();
+  State<FillintheblankWord> createState() => _FillintheblankWordState();
 }
 
-class _QuizWordState extends State<QuizWord> {
+class _FillintheblankWordState extends State<FillintheblankWord> {
   int counter = 0;
   int currentQuest = 0;
   bool isAnswered = false;
-
   void updateCounter(int userAns, int ans) {
     if (!isAnswered) {
       if (userAns == ans) {
@@ -52,7 +51,7 @@ class _QuizWordState extends State<QuizWord> {
         padding: EdgeInsets.only(top: MediaQuery.of(context).size.width * 0.04),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/quiz-flash-card-background.png'),
+            image: AssetImage('assets/images/bg-fillin.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -210,5 +209,4 @@ class _QuizWordState extends State<QuizWord> {
       ),
     );
   }
-
 }

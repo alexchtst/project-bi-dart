@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:syndo/utils/game_data.dart';
-import 'package:syndo/widgets/quiz/quizwordboard.dart';
+import 'package:syndo/widgets/quiz/quizboard.dart';
 
-class QuizWord extends StatefulWidget {
-  const QuizWord({super.key, required this.questbundle});
+class FillintheblankAlphabet extends StatefulWidget {
+  const FillintheblankAlphabet({super.key, required this.questbundle});
   final List<Map<String, dynamic>> questbundle;
 
   @override
-  State<QuizWord> createState() => _QuizWordState();
+  State<FillintheblankAlphabet> createState() => _FillintheblankAlphabetState();
 }
 
-class _QuizWordState extends State<QuizWord> {
+class _FillintheblankAlphabetState extends State<FillintheblankAlphabet> {
   int counter = 0;
   int currentQuest = 0;
   bool isAnswered = false;
-
   void updateCounter(int userAns, int ans) {
     if (!isAnswered) {
       if (userAns == ans) {
@@ -52,7 +51,7 @@ class _QuizWordState extends State<QuizWord> {
         padding: EdgeInsets.only(top: MediaQuery.of(context).size.width * 0.04),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/quiz-flash-card-background.png'),
+            image: AssetImage('assets/images/bg-fillin.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -68,7 +67,7 @@ class _QuizWordState extends State<QuizWord> {
 
               child:
                   !quizSelesai
-                      ? Quizwordboard(
+                      ? Quizboard(
                         options: widget.questbundle[currentQuest]["options"],
                         answerindex:
                             widget.questbundle[currentQuest]["answerindex"],
@@ -146,9 +145,9 @@ class _QuizWordState extends State<QuizWord> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                    gameData.levelUpWord();
-                                    gameData.addCoins(counter * 10);
                                     Navigator.pop(context);
+                                    gameData.levelUpAlphabet();
+                                    gameData.addCoins(counter * 10);
                                   },
                                   child: Container(
                                     padding: EdgeInsets.all(
@@ -210,5 +209,4 @@ class _QuizWordState extends State<QuizWord> {
       ),
     );
   }
-
 }

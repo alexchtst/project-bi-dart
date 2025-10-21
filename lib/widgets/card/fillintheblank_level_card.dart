@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:syndo/screen/quiz.dart';
-import 'package:syndo/screen/quiz_word.dart';
+import 'package:syndo/screen/fillintheblank_alphabet.dart';
+import 'package:syndo/screen/fillintheblank_word.dart';
 import 'package:syndo/utils/data.dart';
 import 'package:syndo/utils/game_data.dart';
 
-class FlashcardLevelCard extends StatelessWidget {
-  const FlashcardLevelCard({
+class FillintheblankLevelCard extends StatelessWidget {
+  const FillintheblankLevelCard({
     super.key,
     required this.level,
     required this.word,
@@ -20,7 +20,9 @@ class FlashcardLevelCard extends StatelessWidget {
     final gameData = Provider.of<GameData>(context);
     final int currentLevel = level;
     final int playerLevel =
-        word ? gameData.quizLevelWord : gameData.quizLevelAlphabet;
+        word
+            ? gameData.fillintheblankWordLevel
+            : gameData.fillintheblankAlphabetLevel;
 
     final bool unlocked = currentLevel <= playerLevel;
 
@@ -46,13 +48,6 @@ class FlashcardLevelCard extends StatelessWidget {
             ? questionWordData.sublist(start, endForQuestionWordData)
             : [];
 
-    // Debug log (opsional)
-    print('start: $start');
-    print('endForQuestionData: $endForQuestionData');
-    print('endForQuestionWordData: $endForQuestionWordData');
-    print('questions.length: ${questions.length}');
-    print('questionwords.length: ${questionwords.length}');
-
     return InkWell(
       onTap:
           unlocked
@@ -62,14 +57,14 @@ class FlashcardLevelCard extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder:
-                          (context) => QuizWord(questbundle: questionwords),
+                          (context) => FillintheblankWord(questbundle: questionwords),
                     ),
                   );
                 } else {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Quiz(questbundle: questions),
+                      builder: (context) => FillintheblankAlphabet(questbundle: questions),
                     ),
                   );
                 }
@@ -138,6 +133,5 @@ class FlashcardLevelCard extends StatelessWidget {
         ],
       ),
     );
-  
   }
 }

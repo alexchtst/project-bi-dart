@@ -183,6 +183,8 @@ flutter:
     - assets/images/opt-tolongstory.png
     - assets/images/opt-trukjawaban.png
     - assets/images/opt-motorstory.png
+    - assets/images/bg-fillin.png
+    - assets/images/fillin.png
 
     - assets/audio/BACKSOUND_GAMELAN_INDONESIAN_MUSIC_ETHNIC_CULTURE.mp3
 

@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
         title: 'Lingo Hands',
         debugShowCheckedModeBanner: false,
         showSemanticsDebugger: false,
-        initialRoute: '/mode',
+        initialRoute: '/',
         routes: {
           '/': (context) => HomeScreen(),
           '/scan-only': (context) =>  Scan(name: 'test'),
@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
           '/coins': (context) => CoinScreen(),
           // '/study': (context) => StudyScreen(),
           '/memo-evaluation': (context) => MemoEvaluation(),
-          '/quiz-flash-card-alphabet': (context) => QuizFlashCard(),
+          '/quiz-flash-card-alphabet': (context) => QuizFlashCard(word: false,),
           '/quiz-flash-card-word': (context) => QuizFlashCard(nogesture: false, word: true,),
           '/alpahbet-word': (context) => AlphabetWord(),
           '/chat-bot' : (context) => ChatBot(),

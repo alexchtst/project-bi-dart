@@ -6,13 +6,28 @@ class GameData extends ChangeNotifier {
   int _quizLevelWord = 1;
   int _quizLevelGeneral = 1;
 
+  int _fillintheblankAlphabetLevel = 1;
+  int _fillintheblankWordLevel = 1;
+
   int get coinBalance => _coinBalance;
   int get quizLevelAlphabet => _quizLevelAlphabet;
   int get quizLevelWord => _quizLevelWord;
   int get quizLevelGeneral => _quizLevelGeneral;
+  int get fillintheblankWordLevel => _fillintheblankWordLevel;
+  int get fillintheblankAlphabetLevel => _fillintheblankAlphabetLevel;
 
   set coinBalance(int value) {
     _coinBalance = value;
+    notifyListeners();
+  }
+
+  set fillintheBlankAlphabetLevet(int value) {
+    _fillintheblankAlphabetLevel = value;
+    notifyListeners();
+  }
+
+  set fillintheBlankWordLevet(int value) {
+    _fillintheblankWordLevel = value;
     notifyListeners();
   }
 
@@ -31,7 +46,6 @@ class GameData extends ChangeNotifier {
     notifyListeners();
   }
 
-  // ===== Coin Management =====
   void addCoins(int amount) {
     _coinBalance += amount;
     notifyListeners();
@@ -44,7 +58,6 @@ class GameData extends ChangeNotifier {
     }
   }
 
-  // ===== Level Management =====
   void levelUpAlphabet() {
     _quizLevelAlphabet++;
     notifyListeners();
@@ -75,12 +88,13 @@ class GameData extends ChangeNotifier {
     notifyListeners();
   }
 
-  // ===== Reset All Data =====
   void resetAll() {
     _coinBalance = 0;
     _quizLevelAlphabet = 1;
     _quizLevelWord = 1;
     _quizLevelGeneral = 1;
+    _fillintheblankAlphabetLevel = 1;
+    _fillintheblankWordLevel = 1;
     notifyListeners();
   }
 }
