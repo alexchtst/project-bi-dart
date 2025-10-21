@@ -234,6 +234,18 @@ flutter:
     - assets/images/siang.png
     - assets/images/siapa.png
 
+    - assets/images/aku.png
+    - assets/images/becak.png
+    - assets/images/hallo.png
+    - assets/images/mau.png
+    - assets/images/mobil.png
+    - assets/images/nama.png
+    - assets/images/perkenalkan.png
+    - assets/images/senang.png
+    - assets/images/terimakasih.png
+    - assets/images/tidakmau.png
+    - assets/images/tolong.png
+
     - assets/audio/BACKSOUND_GAMELAN_INDONESIAN_MUSIC_ETHNIC_CULTURE.mp3
 
     - assets/video/IMG_3096.mp4

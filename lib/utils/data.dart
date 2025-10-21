@@ -2293,9 +2293,9 @@ final List<Map<String, dynamic>> questionFillinData = [
 final List<Map<String, dynamic>> questionFillinWordData = [
   {
     "options": [
-      "assets/images/maucard.png",
+      "assets/images/mau.png",
       "assets/images/perkenalkan.png",
-      "assets/images/terimakasihcard.png",
+      "assets/images/terimakasih.png",
     ],
     "answerindex": 1,
     "questions": [
@@ -2307,9 +2307,9 @@ final List<Map<String, dynamic>> questionFillinWordData = [
   },
   {
     "options": [
-      "assets/images/akucard.png",
-      "assets/images/becakcard.png",
-      "assets/images/namacard.png",
+      "assets/images/aku.png",
+      "assets/images/becak.png",
+      "assets/images/nama.png",
     ],
     "answerindex": 2,
     "questions": [
@@ -2321,9 +2321,9 @@ final List<Map<String, dynamic>> questionFillinWordData = [
   },
   {
     "options": [
-      "assets/images/mobilcard.png",
-      "assets/images/opt-tidakmaustory.png",
-      "assets/images/senangcard.png",
+      "assets/images/mobil.png",
+      "assets/images/tidakmau.png",
+      "assets/images/senang.png",
     ],
     "answerindex": 1,
     "questions": [
@@ -2335,9 +2335,9 @@ final List<Map<String, dynamic>> questionFillinWordData = [
   },
   {
     "options": [
-      "assets/images/hallocard.png",
-      "assets/images/opt-busstory.png",
-      "assets/images/tolongcard.png",
+      "assets/images/hallo.png",
+      "assets/images/bus-fillin.png",
+      "assets/images/tolong.png",
     ],
     "answerindex": 2,
     "questions": [
@@ -2349,9 +2349,9 @@ final List<Map<String, dynamic>> questionFillinWordData = [
   },
   {
     "options": [
-     "assets/images/akucard.png",
-      "assets/images/becakcard.png",
-      "assets/images/namacard.png",
+      "assets/images/aku.png",
+      "assets/images/becak.png",
+      "assets/images/nama.png",
     ],
     "answerindex": 1,
     "questions": [
@@ -2444,7 +2444,7 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "_     ,", "isanswer": true},
       {"content": "DENGANKU?", "isanswer": false},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
   {
     "options": [
@@ -2458,7 +2458,7 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "ADALAH HARI", "isanswer": false},
       {"content": "_     ,", "isanswer": true},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
   {
     "options": [
@@ -2472,7 +2472,7 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "ADALAH HARI", "isanswer": false},
       {"content": "_     ,", "isanswer": true},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
   {
     "options": [
@@ -2486,7 +2486,7 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "DIMULAI PADA HARI", "isanswer": false},
       {"content": "_     ,", "isanswer": true},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
   {
     "options": [
@@ -2500,7 +2500,7 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "AKU MEMILIKI JADWAL", "isanswer": false},
       {"content": "RENANG PADA HARI", "isanswer": false},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
   {
     "options": [
@@ -2515,7 +2515,7 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "DENGANNYA", "isanswer": false},
       {"content": "TADI DI PERPUSATAKAAN", "isanswer": false},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
   {
     "options": [
@@ -2529,7 +2529,7 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "TUBUH MENJADI", "isanswer": false},
       {"content": "_     ,", "isanswer": true},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
   {
     "options": [
@@ -2543,7 +2543,7 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "KAMU", "isanswer": false},
       {"content": "ULANG TAHUN?", "isanswer": false},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
   {
     "options": [
@@ -2701,7 +2701,7 @@ final List<Map<String, dynamic>> questionFillinWordData = [
   },
   {
     "options": [
-      "assets/images/salamkenalcard.png",
+      "assets/images/perkenalkan.png",
       "assets/images/sehat.png",
       "assets/images/belajar.png",
     ],
@@ -2716,7 +2716,7 @@ final List<Map<String, dynamic>> questionFillinWordData = [
   {
     "options": [
       "assets/images/malam.png",
-      "assets/images/senangcard.png",
+      "assets/images/senang.png",
       "assets/images/minggu.png",
     ],
     "answerindex": 1,
@@ -2729,7 +2729,7 @@ final List<Map<String, dynamic>> questionFillinWordData = [
   },
   {
     "options": [
-      "assets/images/namacard.png",
+      "assets/images/nama.png",
       "assets/images/samasama.png",
       "assets/images/bagusbaik.png",
     ],
@@ -2739,13 +2739,13 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "KASIH ADALAH KATA", "isanswer": false},
       {"content": "_     ,", "isanswer": true},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
   {
     "options": [
       "assets/images/berteman.png",
       "assets/images/dimana.png",
-      "assets/images/mobilcard.png",
+      "assets/images/mobil.png",
     ],
     "answerindex": 2,
     "questions": [
@@ -2753,11 +2753,11 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "_     ,", "isanswer": true},
       {"content": "MERAH DI JALAN", "isanswer": false},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
   {
     "options": [
-      "assets/images/salamkenalcard.png",
+      "assets/images/perkenalkan.png",
       "assets/images/sehat.png",
       "assets/images/belajar.png",
     ],
@@ -2767,12 +2767,12 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "AGAR TETAP", "isanswer": false},
       {"content": "_     ,", "isanswer": true},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
   {
     "options": [
       "assets/images/malam.png",
-      "assets/images/senangcard.png",
+      "assets/images/senang.png",
       "assets/images/minggu.png",
     ],
     "answerindex": 0,
@@ -2781,11 +2781,11 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "_     ,", "isanswer": true},
       {"content": "HARI", "isanswer": false},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
   {
     "options": [
-      "assets/images/namacard.png",
+      "assets/images/nama.png",
       "assets/images/samasama.png",
       "assets/images/bagusbaik.png",
     ],
@@ -2795,13 +2795,13 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "AKU", "isanswer": false},
       {"content": "ADALAH ARIN", "isanswer": false},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
   {
     "options": [
       "assets/images/berteman.png",
       "assets/images/dimana.png",
-      "assets/images/mobilcard.png",
+      "assets/images/mobil.png",
     ],
     "answerindex": 0,
     "questions": [
@@ -2809,11 +2809,11 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "_     ,", "isanswer": true},
       {"content": "DENGAN SEMUA ORANG", "isanswer": false},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
   {
     "options": [
-      "assets/images/salamkenalcard.png",
+      "assets/images/perkenalkan.png",
       "assets/images/sehat.png",
       "assets/images/belajar.png",
     ],
@@ -2823,12 +2823,12 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "_     ,", "isanswer": true},
       {"content": "SUPAYA MENJADI PINTAR", "isanswer": false},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
   {
     "options": [
       "assets/images/malam.png",
-      "assets/images/senangcard.png",
+      "assets/images/senang.png",
       "assets/images/minggu.png",
     ],
     "answerindex": 1,
@@ -2837,11 +2837,11 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "_     ,", "isanswer": true},
       {"content": "AKU TIDAK KE SEKOLAH", "isanswer": false},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
-    {
+  {
     "options": [
-      "assets/images/namacard.png",
+      "assets/images/nama.png",
       "assets/images/samasama.png",
       "assets/images/bagusbaik.png",
     ],
@@ -2851,13 +2851,13 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "SANGAT", "isanswer": false},
       {"content": "_     ,", "isanswer": true},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
   {
     "options": [
       "assets/images/berteman.png",
       "assets/images/dimana.png",
-      "assets/images/mobilcard.png",
+      "assets/images/mobil.png",
     ],
     "answerindex": 1,
     "questions": [
@@ -2865,6 +2865,6 @@ final List<Map<String, dynamic>> questionFillinWordData = [
       {"content": "RUMAHMU", "isanswer": false},
       {"content": "BERADA?", "isanswer": false},
     ],
-    "questionText": "assets/images/maucard.png",
+    "questionText": "assets/images/mau.png",
   },
 ];
