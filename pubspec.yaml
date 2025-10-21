@@ -170,7 +170,6 @@ flutter:
 
     - assets/images/opt-akustory.png
     - assets/images/opt-becakstory.png
-    - assets/images/opt-akustory.png
     - assets/images/opt-busstory.png
     - assets/images/opt-halo.png
     - assets/images/opt-kapalstory.png
@@ -183,6 +182,7 @@ flutter:
     - assets/images/opt-tidakmaustory.png
     - assets/images/opt-tolongstory.png
     - assets/images/opt-trukjawaban.png
+    - assets/images/opt-motorstory.png
 
     - assets/audio/BACKSOUND_GAMELAN_INDONESIAN_MUSIC_ETHNIC_CULTURE.mp3
 

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:syndo/utils/data.dart';
 import 'package:syndo/utils/helper.dart';
 import 'package:syndo/widgets/scene/scene_story.dart';
 
@@ -27,7 +26,7 @@ class _StudyBystoryState extends State<StudyBystory> {
             fit: BoxFit.cover,
           ),
         ),
-        child: SceneStory(storyScenes: storyPasarScenes,),
+        child: SceneStory(scenes: helperGetStrudyData(widget.name),),
       )
     );
   }

@@ -1,67 +1,83 @@
 import 'package:flutter/material.dart';
-import 'package:syndo/utils/data.dart';
 
 class DialogField extends StatelessWidget {
   final String actor;
   final String dialog;
+  final String target;
   final VoidCallback onNext;
 
   const DialogField({
     super.key,
     required this.actor,
     required this.dialog,
+    required this.target,
     required this.onNext,
   });
 
   @override
   Widget build(BuildContext context) {
     final panutan = MediaQuery.of(context).size.width;
-    return InkWell(
-      onTap: onNext,
-      child: Positioned(
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Image.asset(
-              'assets/images/story-mode-dialog.png',
-              width: panutan,
-              fit: BoxFit.contain,
-            ),
-            Positioned(
-              bottom: panutan * 0.132,
-              left: panutan * 0.26,
-              child: SizedBox(
-                width: panutan * 0.135,
-                height: panutan * 0.028,
-                child: Text(
-                  actor,
-                  style: TextStyle(
-                    fontSize: panutan * 0.02,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w500,
-                  ),
-                  textAlign: TextAlign.start,
+    return Positioned(
+      bottom: 0,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Image.asset(
+            'assets/images/story-mode-dialog.png',
+            width: panutan,
+            fit: BoxFit.contain,
+          ),
+          Positioned(
+            bottom: panutan * 0.132,
+            left: panutan * 0.26,
+            child: SizedBox(
+              width: panutan * 0.135,
+              height: panutan * 0.035,
+              child: Text(
+                actor,
+                style: TextStyle(
+                  fontSize: panutan * 0.02,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w500,
                 ),
+                textAlign: TextAlign.start,
               ),
             ),
-            Positioned(
-              bottom: panutan * 0.03,
+          ),
+          Positioned(
+            bottom: panutan * 0.03,
+            child: InkWell(
+              onTap: onNext,
               child: SizedBox(
                 width: panutan * 0.52,
                 height: panutan * 0.09,
-                child: Text(
-                  dialog,
-                  style: TextStyle(
-                    fontSize: panutan * 0.02,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w500,
-                  ),
-                  textAlign: TextAlign.start,
+                child: Column(
+                  children: [
+                    Text(
+                      dialog,
+                      style: TextStyle(
+                        fontSize: panutan * 0.02,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
+                    if (target.isNotEmpty)
+                      Text(
+                        'tebak: $target',
+                        style: TextStyle(
+                          fontSize: panutan * 0.02,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w800,
+                        ),
+                        textAlign: TextAlign.start,
+                      ),
+                  ],
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -70,8 +86,18 @@ class DialogField extends StatelessWidget {
 class ActorHeader extends StatelessWidget {
   final String arinImgPath;
   final String gielImgPath;
+  final String showImageArin;
+  final String showImageGiel;
+  final bool isAnswered;
 
-  const ActorHeader({super.key, this.arinImgPath = "", this.gielImgPath = ""});
+  const ActorHeader({
+    super.key,
+    this.arinImgPath = "",
+    this.gielImgPath = "",
+    this.showImageArin = "",
+    this.showImageGiel = "",
+    required this.isAnswered,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -86,19 +112,57 @@ class ActorHeader extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           if (arinImgPath.isNotEmpty)
-            Image.asset(
-              arinImgPath,
-              width: screenWidth * 0.40,
-              fit: BoxFit.contain,
+            Stack(
+              alignment: Alignment.bottomLeft,
+              children: [
+                Positioned(
+                  child: Image.asset(
+                    arinImgPath,
+                    width: screenWidth * 0.40,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+                if (showImageArin.isNotEmpty && isAnswered)
+                  Positioned(
+                    left: screenWidth * 0.18,
+                    top: screenWidth * 0.012,
+                    child: Image.asset(
+                      showImageArin,
+                      width: screenWidth * 0.20,
+                      fit: BoxFit.contain,
+                    ),
+                  )
+                else
+                  const SizedBox(width: 0),
+              ],
             )
           else
             const SizedBox(width: 0),
 
           if (gielImgPath.isNotEmpty)
-            Image.asset(
-              gielImgPath,
-              width: screenWidth * 0.35,
-              fit: BoxFit.contain,
+            Stack(
+              alignment: Alignment.bottomRight,
+              children: [
+                Positioned(
+                  child: Image.asset(
+                    gielImgPath,
+                    width: screenWidth * 0.40,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+                if (showImageGiel.isNotEmpty && isAnswered)
+                  Positioned(
+                    left: screenWidth * 0.21,
+                    top: screenWidth * 0.02,
+                    child: Image.asset(
+                      showImageGiel,
+                      width: screenWidth * 0.15,
+                      fit: BoxFit.contain,
+                    ),
+                  )
+                else
+                  const SizedBox(width: 0),
+              ],
             )
           else
             const SizedBox(width: 0),
@@ -113,37 +177,78 @@ class OptionFromAnswer extends StatefulWidget {
     super.key,
     required this.imgPath,
     required this.isAnswer,
+    required this.changeAnswer,
   });
 
   final String imgPath;
   final bool isAnswer;
+  final VoidCallback changeAnswer;
 
   @override
   State<OptionFromAnswer> createState() => _OptionFromAnswerState();
 }
 
 class _OptionFromAnswerState extends State<OptionFromAnswer> {
+  bool? checked;
+  bool? result;
+
+  void checkResult() {
+    setState(() {
+      checked = true;
+      result = widget.isAnswer;
+    });
+
+    Future.delayed(const Duration(seconds: 2), () {
+      widget.changeAnswer();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/images/bg-pilihan-ganda.png'),
-          fit: BoxFit.cover,
-        ),
-      ),
-      child: Image.asset(
-        widget.imgPath,
-        fit: BoxFit.fitHeight,
+    final panutan = MediaQuery.of(context).size.width;
+
+    return GestureDetector(
+      onTap: checked == null ? checkResult : null,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(
+            alignment: Alignment.center,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/bg-pilihan-ganda.png'),
+                fit: BoxFit.fill,
+              ),
+            ),
+            child: Image.asset(widget.imgPath, fit: BoxFit.fill),
+          ),
+
+          if (checked == true)
+            Positioned(
+              top: 0,
+              right: 0,
+              child: Icon(
+                result == true ? Icons.check_circle : Icons.cancel,
+                color: result == true ? Colors.greenAccent : Colors.redAccent,
+                size: panutan * 0.05,
+              ),
+            ),
+        ],
       ),
     );
   }
 }
 
 class QuestionAnswer extends StatefulWidget {
-  const QuestionAnswer({super.key, required this.quiz});
+  const QuestionAnswer({
+    super.key,
+    required this.quiz,
+    required this.changeAnswer,
+    required this.isAnswered,
+  });
   final List<Map<String, dynamic>> quiz;
+  final VoidCallback changeAnswer;
+  final bool isAnswered;
 
   @override
   State<QuestionAnswer> createState() => _QuestionAnswerState();
@@ -169,6 +274,7 @@ class _QuestionAnswerState extends State<QuestionAnswer> {
                 return OptionFromAnswer(
                   imgPath: item["image"],
                   isAnswer: item["ans"],
+                  changeAnswer: widget.changeAnswer,
                 );
               }).toList(),
         ),
@@ -178,9 +284,9 @@ class _QuestionAnswerState extends State<QuestionAnswer> {
 }
 
 class SceneStory extends StatefulWidget {
-  const SceneStory({super.key, required this.storyScenes});
+  const SceneStory({super.key, required this.scenes});
 
-  final List<Map<String, dynamic>> storyScenes;
+  final List<Map<String, dynamic>> scenes;
 
   @override
   State<SceneStory> createState() => _SceneStoryState();
@@ -188,11 +294,13 @@ class SceneStory extends StatefulWidget {
 
 class _SceneStoryState extends State<SceneStory> {
   int currentScene = 0;
-  final scenes = storyPasarScenes;
+  bool isAnswered = false;
+
   void nextScene() {
-    if (currentScene < scenes.length - 1) {
+    if (currentScene < widget.scenes.length - 1) {
       setState(() {
         currentScene++;
+        isAnswered = false;
       });
     } else {
       ScaffoldMessenger.of(
@@ -201,22 +309,36 @@ class _SceneStoryState extends State<SceneStory> {
     }
   }
 
+  void handleChangeIsAnswered() {
+    setState(() {
+      isAnswered = true;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         ActorHeader(
-          arinImgPath: scenes[currentScene]['arinImg'],
-          gielImgPath: scenes[currentScene]['gielImg'],
+          arinImgPath: widget.scenes[currentScene]['arinImg'],
+          gielImgPath: widget.scenes[currentScene]['gielImg'],
+          showImageArin: widget.scenes[currentScene]['showImageArin'],
+          showImageGiel: widget.scenes[currentScene]['showImageGiel'],
+          isAnswered: isAnswered,
         ),
-        QuestionAnswer(
-          quiz:
-              (scenes[currentScene]["quiz"] as List)
-                  .cast<Map<String, dynamic>>(),
-        ),
+        if (!isAnswered &&
+            (widget.scenes[currentScene]["quiz"] as List).isNotEmpty)
+          QuestionAnswer(
+            changeAnswer: handleChangeIsAnswered,
+            isAnswered: isAnswered,
+            quiz:
+                (widget.scenes[currentScene]["quiz"] as List)
+                    .cast<Map<String, dynamic>>(),
+          ),
         DialogField(
-          actor: scenes[currentScene]['actor'],
-          dialog: scenes[currentScene]['dialog'],
+          actor: widget.scenes[currentScene]['actor'],
+          dialog: widget.scenes[currentScene]['dialog'],
+          target: widget.scenes[currentScene]['target'],
           onNext: nextScene,
         ),
       ],

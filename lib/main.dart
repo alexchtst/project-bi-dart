@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
         title: 'Lingo Hands',
         debugShowCheckedModeBanner: false,
         showSemanticsDebugger: false,
-        initialRoute: '/',
+        initialRoute: '/mode',
         routes: {
           '/': (context) => HomeScreen(),
           '/scan-only': (context) =>  Scan(name: 'test'),

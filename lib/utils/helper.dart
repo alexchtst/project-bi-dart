@@ -1,3 +1,5 @@
+import 'package:syndo/utils/data.dart';
+
 String processInputQr(String input) {
   final lower = input.toLowerCase();
   final baseUrl =
@@ -36,5 +38,28 @@ String helperGetImageStudyPath(String code) {
       return 'assets/images/bg-zoo.png';
     default:
       return 'assets/images/bg-pasar.png';
+  }
+}
+
+List<Map<String, dynamic>> helperGetStrudyData(String name){
+   switch (name) {
+    case 'BERWISATA JAKARTA':
+      return storyJakartaScenes;
+    case 'MONKEY FOREST':
+      return storyMonkeyScenes;
+    case 'MUSEUM':
+      return storyMuseumScenes;
+    case 'PANTAI':
+      return storyPantaiScenes;
+    case 'PASAR':
+      return storyPasarScenes;
+    case 'TAMAN':
+      return storyTamanScenes;
+    case 'WARUNG SATE':
+      return storyWarungScenes;
+    case 'ZOO':
+      return storyKebunBinatangScenes;
+    default:
+      return storyBuahScenes;
   }
 }

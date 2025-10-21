@@ -19,33 +19,38 @@ class FlashcardLevelCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final gameData = Provider.of<GameData>(context);
     final int currentLevel = level;
-    final int playerLevel = word ? gameData.quizLevelWord : gameData.quizLevelAlphabet;
+    final int playerLevel =
+        word ? gameData.quizLevelWord : gameData.quizLevelAlphabet;
 
     final bool unlocked = currentLevel <= playerLevel;
 
-    final List<Map<String, dynamic>> questions = questionData.sublist(1, 3);
-    final List<Map<String, dynamic>> questionwords = questionWordData;
+    final int start = (level - 1) * 4;
+    final int end = start + 4 <= questionData.length ? start + 4 : questionData.length;
+    final List<Map<String, dynamic>> questions = questionData.sublist(start, end);
+    final List<Map<String, dynamic>> questionwords = questionWordData.sublist(start, end);
 
     return InkWell(
-      onTap: unlocked
-          ? () {
-              if (word) {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => QuizWord(questbundle: questionwords),
-                  ),
-                );
-              } else {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Quiz(questbundle: questions),
-                  ),
-                );
+      onTap:
+          unlocked
+              ? () {
+                if (word) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder:
+                          (context) => QuizWord(questbundle: questionwords),
+                    ),
+                  );
+                } else {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Quiz(questbundle: questions),
+                    ),
+                  );
+                }
               }
-            }
-          : null, // disable tap kalau belum terbuka
+              : null, // disable tap kalau belum terbuka
       child: Stack(
         alignment: Alignment.topCenter,
         clipBehavior: Clip.none,
@@ -60,9 +65,10 @@ class FlashcardLevelCard extends StatelessWidget {
               height: MediaQuery.of(context).size.width * 0.12,
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                color: unlocked
-                    ? const Color.fromARGB(255, 255, 212, 65)
-                    : Colors.grey,
+                color:
+                    unlocked
+                        ? const Color.fromARGB(255, 255, 212, 65)
+                        : Colors.grey,
                 borderRadius: BorderRadius.circular(20.0),
               ),
               child: Text(
@@ -87,9 +93,10 @@ class FlashcardLevelCard extends StatelessWidget {
                 MediaQuery.of(context).size.width * 0.009,
               ),
               decoration: BoxDecoration(
-                color: unlocked
-                    ? const Color.fromARGB(255, 212, 129, 10)
-                    : Colors.grey.shade700,
+                color:
+                    unlocked
+                        ? const Color.fromARGB(255, 212, 129, 10)
+                        : Colors.grey.shade700,
                 borderRadius: BorderRadius.circular(10.0),
               ),
               child: Text(
