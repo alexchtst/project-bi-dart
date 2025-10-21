@@ -62,7 +62,6 @@ class _FillintheblankWordState extends State<FillintheblankWord> {
             Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.width * 0.35,
-              color: const Color.fromARGB(162, 255, 255, 255),
               alignment: Alignment.center,
 
               child:
@@ -71,12 +70,11 @@ class _FillintheblankWordState extends State<FillintheblankWord> {
                         options: widget.questbundle[currentQuest]["options"],
                         answerindex:
                             widget.questbundle[currentQuest]["answerindex"],
-                        questImageQuestion:
+                        questions:
                             widget
-                                .questbundle[currentQuest]["questImageQuestion"],
+                                .questbundle[currentQuest]["questions"],
                         questImageAnswer:
-                            widget
-                                .questbundle[currentQuest]["questImageAnswer"],
+                            widget.questbundle[currentQuest]["questionText"],
                         questionStatus: isAnswered,
                         onAnswerSelected: updateCounter,
                         onNext: nextQuestion,
@@ -145,7 +143,7 @@ class _FillintheblankWordState extends State<FillintheblankWord> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                    gameData.levelUpWord();
+                                    gameData.levelUpWordFillin();
                                     gameData.addCoins(counter * 10);
                                     Navigator.pop(context);
                                   },
@@ -178,32 +176,6 @@ class _FillintheblankWordState extends State<FillintheblankWord> {
                         ),
                       ),
             ),
-
-            if (!quizSelesai)
-              Positioned(
-                top: -MediaQuery.of(context).size.width * 0.02,
-                child: Container(
-                  width: MediaQuery.of(context).size.width * 0.5,
-                  padding: EdgeInsets.all(
-                    MediaQuery.of(context).size.width * 0.001,
-                  ),
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 212, 129, 10),
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-
-                  child: const Text(
-                    'Pilih Arti Kartu Yang Sesuai',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 24,
-                      color: Colors.white,
-                      fontFamily: 'Baloo',
-                    ),
-                  ),
-                ),
-              ),
           ],
         ),
       ),

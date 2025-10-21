@@ -2105,7 +2105,7 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/lquestcard.png",
     ],
     "answerindex": 0,
-    "questImageQuestion": "assets/images/bquestcard.png",
+    "questImageQuestion": "assets/images/fillin-meja.png",
     "questionText": "M E _ A",
   },
   {
@@ -2115,7 +2115,7 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/mquestcard.png",
     ],
     "answerindex": 0,
-    "questImageQuestion": "assets/images/cquestcard.png",
+    "questImageQuestion": "assets/images/fillin-pohon.png",
     "questionText": "P O _ O N",
   },
   {
@@ -2125,8 +2125,8 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/dquestcard.png",
     ],
     "answerindex": 1,
-    "questImageQuestion": "assets/images/dquestcard.png",
-    "questionText": "B _ O L A",
+    "questImageQuestion": "assets/images/fillin-bola.png",
+    "questionText": "B _ L A",
   },
   {
     "options": [
@@ -2135,7 +2135,7 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/rquestcard.png",
     ],
     "answerindex": 0,
-    "questImageQuestion": "assets/images/equestcard.png",
+    "questImageQuestion": "assets/images/fillin-sapi.png",
     "questionText": "S A P _",
   },
   {
@@ -2145,8 +2145,8 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/bquestcard.png",
     ],
     "answerindex": 0,
-    "questImageQuestion": "assets/images/fquestcard.png",
-    "questionText": "_ A Y A M",
+    "questImageQuestion": "assets/images/fillin-ayam.png",
+    "questionText": "_ Y A M",
   },
   {
     "options": [
@@ -2155,7 +2155,7 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/tquestcard.png",
     ],
     "answerindex": 0,
-    "questImageQuestion": "assets/images/gquestcard.png",
+    "questImageQuestion": "assets/images/fillin-pensil.png",
     "questionText": "P E _ S I L",
   },
   {
@@ -2165,7 +2165,7 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/tquestcard.png",
     ],
     "answerindex": 2,
-    "questImageQuestion": "assets/images/hquestcard.png",
+    "questImageQuestion": "assets/images/fillin-telur.png",
     "questionText": "_ E L U R",
   },
   {
@@ -2175,7 +2175,7 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/lquestcard.png",
     ],
     "answerindex": 1,
-    "questImageQuestion": "assets/images/iquestcard.png",
+    "questImageQuestion": "assets/images/fillin-kapal.png",
     "questionText": "_ A P A L",
   },
   {
@@ -2185,7 +2185,7 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/bquestcard.png",
     ],
     "answerindex": 1,
-    "questImageQuestion": "assets/images/jquestcard.png",
+    "questImageQuestion": "assets/images/fillin-apel.png",
     "questionText": "A _ E L",
   },
   {
@@ -2195,7 +2195,7 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/rquestcard.png",
     ],
     "answerindex": 1,
-    "questImageQuestion": "assets/images/kquestcard.png",
+    "questImageQuestion": "assets/images/fillin-wortel.png",
     "questionText": "_ O R T E L",
   },
   {
@@ -2205,7 +2205,7 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/dquestcard.png",
     ],
     "answerindex": 2,
-    "questImageQuestion": "assets/images/lquestcard.png",
+    "questImageQuestion": "assets/images/fillin-kuda.png",
     "questionText": "K U _ A",
   },
   {
@@ -2215,7 +2215,7 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/mquestcard.png",
     ],
     "answerindex": 2,
-    "questImageQuestion": "assets/images/mquestcard.png",
+    "questImageQuestion": "assets/images/fillin-motor.png",
     "questionText": "_ O T O R",
   },
   {
@@ -2225,7 +2225,7 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/rquestcard.png",
     ],
     "answerindex": 2,
-    "questImageQuestion": "assets/images/nquestcard.png",
+    "questImageQuestion": "assets/images/fillin-kereta.png",
     "questionText": "K E _ E T A",
   },
   {
@@ -2235,7 +2235,7 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/nquestcard.png",
     ],
     "answerindex": 0,
-    "questImageQuestion": "assets/images/oquestcard.png",
+    "questImageQuestion": "assets/images/fillin-zebra.png",
     "questionText": "_ E B R A",
   },
   {
@@ -2245,7 +2245,7 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/lquestcard.png",
     ],
     "answerindex": 2,
-    "questImageQuestion": "assets/images/pquestcard.png",
+    "questImageQuestion": "assets/images/fillin-mobil.png",
     "questionText": "M O B I _",
   },
   {
@@ -2255,7 +2255,7 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/mquestcard.png",
     ],
     "answerindex": 1,
-    "questImageQuestion": "assets/images/qquestcard.png",
+    "questImageQuestion": "assets/images/fillin-sapi.png",
     "questionText": "S A P _",
   },
   {
@@ -2265,7 +2265,7 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/nquestcard.png",
     ],
     "answerindex": 2,
-    "questImageQuestion": "assets/images/rquestcard.png",
+    "questImageQuestion": "assets/images/fillin-lilin.png",
     "questionText": "L I L I _",
   },
   {
@@ -2275,7 +2275,7 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/tquestcard.png",
     ],
     "answerindex": 1,
-    "questImageQuestion": "assets/images/squestcard.png",
+    "questImageQuestion": "assets/images/fillin-payung.png",
     "questionText": "P A _ U N G",
   },
   {
@@ -2285,7 +2285,7 @@ final List<Map<String, dynamic>> questionFillinData = [
       "assets/images/dquestcard.png",
     ],
     "answerindex": 0,
-    "questImageQuestion": "assets/images/tquestcard.png",
+    "questImageQuestion": "assets/images/fillin-pisang.png",
     "questionText": "P I _ A N G",
   },
 ];
@@ -2293,123 +2293,550 @@ final List<Map<String, dynamic>> questionFillinData = [
 final List<Map<String, dynamic>> questionFillinWordData = [
   {
     "options": [
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
     ],
-    "answerindex": 0,
-    "questImageQuestion": "assets/images/akuquestcard.png",
+    "answerindex": 1,
+    "questions": [
+      {"content": "_     ,", "isanswer": true},
+      {"content": "NAMAKU", "isanswer": false},
+      {"content": "GIEL", "isanswer": false},
+    ],
     "questionText": "assets/images/akucard.png",
   },
   {
     "options": [
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
     ],
-    "answerindex": 1,
-    "questImageQuestion": "assets/images/terimakasihquestcard.png",
+    "answerindex": 2,
+    "questions": [
+      {"content": "_     ,", "isanswer": true},
+      {"content": "KAMU", "isanswer": false},
+      {"content": "SIAPA", "isanswer": false},
+    ],
     "questionText": "assets/images/terimakasihcard.png",
   },
   {
     "options": [
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
     ],
-    "answerindex": 2,
-    "questImageQuestion": "assets/images/halloquestcard.png",
+    "answerindex": 1,
+    "questions": [
+      {"content": "AKU", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+      {"content": "MELAKUKAN HAL BURUK", "isanswer": false},
+    ],
     "questionText": "assets/images/hallocard.png",
   },
   {
     "options": [
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
     ],
     "answerindex": 2,
-    "questImageQuestion": "assets/images/senangquestcard.png",
+    "questions": [
+      {"content": "KITA MENGUCAPKAN", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+      {"content": "SAAT BUTUH BANTUAN", "isanswer": false},
+    ],
     "questionText": "assets/images/senangcard.png",
   },
   {
     "options": [
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
     ],
-    "answerindex": 0,
-    "questImageQuestion": "assets/images/bisquestcard.png",
+    "answerindex": 1,
+    "questions": [
+      {"content": "AYO BERKELILING", "isanswer": false},
+      {"content": "YOGYAKARTA NAIK", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+    ],
     "questionText": "assets/images/biscard.png",
   },
   {
     "options": [
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
     ],
-    "answerindex": 1,
-    "questImageQuestion": "assets/images/tolongquestcard.png",
+    "answerindex": 2,
+    "questions": [
+      {"content": "_     ,", "isanswer": true},
+      {"content": "MERUPAKAN HARI", "isanswer": false},
+      {"content": "SEBELUM HARI MINGGU", "isanswer": false},
+    ],
     "questionText": "assets/images/tolongcard.png",
   },
   {
     "options": [
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
     ],
-    "answerindex": 0,
-    "questImageQuestion": "assets/images/senangquestcard.png",
+    "answerindex": 1,
+    "questions": [
+      {"content": "BALASAN DARI KATA TERIMA", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+      {"content": "KASIH ADALAH", "isanswer": false},
+    ],
     "questionText": "assets/images/senangcard.png",
   },
   {
     "options": [
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
     ],
-    "answerindex": 2,
-    "questImageQuestion": "assets/images/terimakasihquestcard.png",
+    "answerindex": 1,
+    "questions": [
+      {"content": "HARI SETELAH HARI SENIN", "isanswer": false},
+      {"content": "ADALAH HARI", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+    ],
     "questionText": "assets/images/terimakasihcard.png",
   },
   {
     "options": [
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
     ],
-    "answerindex": 1,
-    "questImageQuestion": "assets/images/namaquestcard.png",
+    "answerindex": 2,
+    "questions": [
+      {"content": "SEKOLAH LIBUR DARI HARI", "isanswer": false},
+      {"content": "SABTU", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+      {"content": "HARI MINGGU", "isanswer": false},
+    ],
     "questionText": "assets/images/namacard.png",
   },
   {
     "options": [
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
     ],
     "answerindex": 1,
-    "questImageQuestion": "assets/images/mobilquestcard.png",
+    "questions": [
+      {"content": "LIBURAN KELUARGA", "isanswer": false},
+      {"content": "BIASANYA PADA HARI", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+    ],
     "questionText": "assets/images/mobilcard.png",
   },
   {
     "options": [
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
-      "assets/images/fillin-bebek.png",
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
     ],
     "answerindex": 0,
-    "questImageQuestion": "assets/images/mauquestcard.png",
+    "questions": [
+      {"content": "APAKAH KAMU MAU", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+      {"content": "DENGANKU?", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 2,
+    "questions": [
+      {"content": "HARI SETELAH HARI SELASA", "isanswer": false},
+      {"content": "ADALAH HARI", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 0,
+    "questions": [
+      {"content": "HARI SETELAH HARI KAMIS", "isanswer": false},
+      {"content": "ADALAH HARI", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 0,
+    "questions": [
+      {"content": "HARI PERTAMA SEKOLAH", "isanswer": false},
+      {"content": "DIMULAI PADA HARI", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 1,
+    "questions": [
+      {"content": "_     ,", "isanswer": true},
+      {"content": "AKU MEMILIKI JADWAL", "isanswer": false},
+      {"content": "RENANG PADA HARI", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 0,
+    "questions": [
+      {"content": "AKU", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+      {"content": "DENGANNYA", "isanswer": false},
+      {"content": "TADI DI PERPUSATAKAAN", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 2,
+    "questions": [
+      {"content": "AKU BEROLAHRAGA SUPAYA", "isanswer": false},
+      {"content": "TUBUH MENJADI", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 1,
+    "questions": [
+      {"content": "_     ,", "isanswer": true},
+      {"content": "KAMU", "isanswer": false},
+      {"content": "ULANG TAHUN?", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 2,
+    "questions": [
+      {"content": "AKU MAKAN SIANG", "isanswer": false},
+      {"content": "PADA WAKTU", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 2,
+    "questions": [
+      {"content": "_     ,", "isanswer": true},
+      {"content": "PAGI", "isanswer": false},
+      {"content": "SEMUANYA", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 1,
+    "questions": [
+      {"content": "HARI INI AKU", "isanswer": false},
+      {"content": "MERASA", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 0,
+    "questions": [
+      {"content": "_     ,", "isanswer": true},
+      {"content": "KAMU", "isanswer": false},
+      {"content": "TINGGAL?", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 0,
+    "questions": [
+      {"content": "_     ,", "isanswer": true},
+      {"content": "HARGA", "isanswer": false},
+      {"content": "BUKU INI", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 0,
+    "questions": [
+      {"content": "_     ,", "isanswer": true},
+      {"content": "NAMA", "isanswer": false},
+      {"content": "KAMU", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 0,
+    "questions": [
+      {"content": "AKU SENANG", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+      {"content": "BERSAMA TEMAN", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 2,
+    "questions": [
+      {"content": "AKU SUKA", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+      {"content": "SETIAP HARI", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 1,
+    "questions": [
+      {"content": "MATAHARI TERBENAM DI", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+      {"content": "HARI", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 1,
+    "questions": [
+      {"content": "AKU TIDUR SAAT", "isanswer": false},
+      {"content": "HARI SUDAH", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 2,
+    "questions": [
+      {"content": "AKU BANGN SAAT", "isanswer": false},
+      {"content": "HARI MASIH", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 0,
+    "questions": [
+      {"content": "HALLO!", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+      {"content": "NAMAKU GIEL", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 1,
+    "questions": [
+      {"content": "DIA TERLIHAT SANGAT", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+      {"content": "HARI INI", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 1,
+    "questions": [
+      {"content": "JAWABAN KATA TERIMA", "isanswer": false},
+      {"content": "KASIH ADALAH KATA", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 2,
+    "questions": [
+      {"content": "AKU MELIHAT SEBUAH", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+      {"content": "MERAH DI JALAN", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 1,
+    "questions": [
+      {"content": "AKU HARUS MAKAN SAYUR", "isanswer": false},
+      {"content": "AGAR TETAP", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 0,
+    "questions": [
+      {"content": "_     ,", "isanswer": true},
+      {"content": "AKU", "isanswer": false},
+      {"content": "ADALAH ARIN", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 0,
+    "questions": [
+      {"content": "AKU INGIN", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+      {"content": "DENGAN SEMUA ORANG", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 2,
+    "questions": [
+      {"content": "KITA HARUS RAJIN", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+      {"content": "SUPAYA MENJADI PINTAR", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 1,
+    "questions": [
+      {"content": "HARI", "isanswer": false},
+      {"content": "_     ,", "isanswer": true},
+      {"content": "AKU TIDAK KE SEKOLAH", "isanswer": false},
+    ],
+    "questionText": "assets/images/maucard.png",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 1,
+    "questions": [
+      {"content": "_     ,", "isanswer": true},
+      {"content": "RUMAHMU", "isanswer": false},
+      {"content": "BERADA?", "isanswer": false},
+    ],
     "questionText": "assets/images/maucard.png",
   },
 ];

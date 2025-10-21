@@ -7,7 +7,7 @@ class QuizFillinwordboard extends StatelessWidget {
     super.key,
     required this.options,
     required this.answerindex,
-    required this.questImageQuestion,
+    required this.questions,
     required this.questImageAnswer,
     required this.questionStatus,
     required this.onAnswerSelected,
@@ -16,7 +16,7 @@ class QuizFillinwordboard extends StatelessWidget {
 
   final List<String> options;
   final int answerindex;
-  final String questImageQuestion;
+  final List<Map<String, dynamic>> questions;
   final String questImageAnswer;
   final bool questionStatus;
   final Function(int userAns, int ans) onAnswerSelected;
@@ -24,47 +24,75 @@ class QuizFillinwordboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Image.asset(
-          questionStatus ? questImageAnswer : questImageQuestion,
-          height: MediaQuery.of(context).size.width * 0.25,
-        ),
-        SizedBox(width: MediaQuery.of(context).size.width * 0.1),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            QuizOptionWord(
-              optionValue: options[0],
-              answerIndex: answerindex,
-              currentIndex: 0,
-              status: questionStatus,
-              onAnswerSelected: onAnswerSelected,
-            ),
-            SizedBox(height: MediaQuery.of(context).size.width * 0.012),
-            QuizOptionWord(
-              optionValue: options[1],
-              answerIndex: answerindex,
-              currentIndex: 1,
-              status: questionStatus,
-              onAnswerSelected: onAnswerSelected,
-            ),
-            SizedBox(height: MediaQuery.of(context).size.width * 0.012),
-            QuizOptionWord(
-              optionValue: options[2],
-              answerIndex: answerindex,
-              currentIndex: 2,
-              status: questionStatus,
-              onAnswerSelected: onAnswerSelected,
-            ),
-          ],
-        ),
-        const SizedBox(width: 50),
-        if (questionStatus) NavigationButton(onTap: onNext, isNext: true),
-      ],
+    final panutan = MediaQuery.of(context).size.width;
+
+    return SizedBox(
+      width: panutan * 0.8,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Wrap(
+            alignment: WrapAlignment.center,
+            runSpacing: panutan * 0.005,
+            spacing: panutan * 0.01,
+            children:
+                questions.map((comp) {
+                  final bool isAnswer = comp['isanswer'] ?? false;
+                  final String content = comp['content'] ?? '';
+                  return Container(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: panutan * 0.02,
+                      vertical: panutan * 0.01,
+                    ),
+                    decoration: BoxDecoration(
+                      color: isAnswer ? Colors.green : const Color.fromARGB(255, 245, 224, 41),
+                      borderRadius: BorderRadius.circular(panutan * 0.005),
+                    ),
+                    child: Text(
+                      content,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: panutan * 0.03,
+                      ),
+                    ),
+                  );
+                }).toList(),
+          ),
+          SizedBox(height: MediaQuery.of(context).size.width * 0.05),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              QuizOptionWord(
+                optionValue: options[0],
+                answerIndex: answerindex,
+                currentIndex: 0,
+                status: questionStatus,
+                onAnswerSelected: onAnswerSelected,
+              ),
+              SizedBox(width: panutan * 0.025),
+              QuizOptionWord(
+                optionValue: options[1],
+                answerIndex: answerindex,
+                currentIndex: 1,
+                status: questionStatus,
+                onAnswerSelected: onAnswerSelected,
+              ),
+              SizedBox(width: panutan * 0.025),
+              QuizOptionWord(
+                optionValue: options[2],
+                answerIndex: answerindex,
+                currentIndex: 2,
+                status: questionStatus,
+                onAnswerSelected: onAnswerSelected,
+              ),
+            ],
+          ),
+          const SizedBox(width: 20),
+          if (questionStatus) NavigationButton(onTap: onNext, isNext: true),
+        ],
+      ),
     );
   }
 }

@@ -30,7 +30,7 @@ class QuizFillinboard extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(
-          "assets/images/fillin-bebek.png",
+          questImageQuestion,
           height: MediaQuery.of(context).size.width * 0.25,
         ),
         const SizedBox(width: 10),

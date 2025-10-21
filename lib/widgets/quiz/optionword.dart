@@ -32,22 +32,11 @@ class _QuizOptionState extends State<QuizOptionWord> {
             widget.onAnswerSelected(widget.currentIndex, widget.answerIndex);
           },
           child: Container(
-            width: MediaQuery.of(context).size.width * 0.2,
-            height: MediaQuery.of(context).size.width * 0.05,
+            width: MediaQuery.of(context).size.width * 0.16,
             alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255, 255, 212, 65),
-              borderRadius: BorderRadius.circular(20.0),
-            ),
-            child: Text(
+            child: Image.asset(
               widget.optionValue,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 32,
-                color: Colors.white,
-                fontFamily: 'Baloo',
-              ),
+              fit: BoxFit.fill,
             ),
           ),
         ),

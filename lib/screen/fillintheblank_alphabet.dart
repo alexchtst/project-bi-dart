@@ -147,7 +147,7 @@ class _FillintheblankAlphabetState extends State<FillintheblankAlphabet> {
                                 InkWell(
                                   onTap: () {
                                     Navigator.pop(context);
-                                    gameData.levelUpAlphabet();
+                                    gameData.levelUpAlphabetFillin();
                                     gameData.addCoins(counter * 10);
                                   },
                                   child: Container(

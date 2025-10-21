@@ -68,6 +68,16 @@ class GameData extends ChangeNotifier {
     notifyListeners();
   }
 
+  void levelUpAlphabetFillin() {
+    _fillintheblankAlphabetLevel++;
+    notifyListeners();
+  }
+
+  void levelUpWordFillin() {
+    _fillintheblankWordLevel++;
+    notifyListeners();
+  }
+
   void levelUpGeneral() {
     _quizLevelGeneral++;
     notifyListeners();

@@ -124,7 +124,7 @@ class FlashcardLevelCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10.0),
               ),
               child: Text(
-                unlocked ? 'Level' : 'Locked 🔒',
+                unlocked ? 'Level' : 'Terkunci',
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
