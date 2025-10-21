@@ -2085,3 +2085,331 @@ final List<Map<String, dynamic>> storyWarungScenes = [
     "target": "",
   },
 ];
+
+// start here
+final List<Map<String, dynamic>> questionFillinData = [
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/bquestcard.png",
+      "assets/images/cquestcard.png",
+    ],
+    "answerindex": 1,
+    "questImageQuestion": "assets/images/fillin-bebek.png",
+    "questionText": "_ E B E K",
+  },
+  {
+    "options": [
+      "assets/images/jquestcard.png",
+      "assets/images/kquestcard.png",
+      "assets/images/lquestcard.png",
+    ],
+    "answerindex": 0,
+    "questImageQuestion": "assets/images/bquestcard.png",
+    "questionText": "M E _ A",
+  },
+  {
+    "options": [
+      "assets/images/hquestcard.png",
+      "assets/images/iquestcard.png",
+      "assets/images/mquestcard.png",
+    ],
+    "answerindex": 0,
+    "questImageQuestion": "assets/images/cquestcard.png",
+    "questionText": "P O _ O N",
+  },
+  {
+    "options": [
+      "assets/images/squestcard.png",
+      "assets/images/oquestcard.png",
+      "assets/images/dquestcard.png",
+    ],
+    "answerindex": 1,
+    "questImageQuestion": "assets/images/dquestcard.png",
+    "questionText": "B _ O L A",
+  },
+  {
+    "options": [
+      "assets/images/squestcard.png",
+      "assets/images/wquestcard.png",
+      "assets/images/rquestcard.png",
+    ],
+    "answerindex": 0,
+    "questImageQuestion": "assets/images/equestcard.png",
+    "questionText": "S A P _",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/pquestcard.png",
+      "assets/images/bquestcard.png",
+    ],
+    "answerindex": 0,
+    "questImageQuestion": "assets/images/fquestcard.png",
+    "questionText": "_ A Y A M",
+  },
+  {
+    "options": [
+      "assets/images/nquestcard.png",
+      "assets/images/yquestcard.png",
+      "assets/images/tquestcard.png",
+    ],
+    "answerindex": 0,
+    "questImageQuestion": "assets/images/gquestcard.png",
+    "questionText": "P E _ S I L",
+  },
+  {
+    "options": [
+      "assets/images/nquestcard.png",
+      "assets/images/yquestcard.png",
+      "assets/images/tquestcard.png",
+    ],
+    "answerindex": 2,
+    "questImageQuestion": "assets/images/hquestcard.png",
+    "questionText": "_ E L U R",
+  },
+  {
+    "options": [
+      "assets/images/jquestcard.png",
+      "assets/images/kquestcard.png",
+      "assets/images/lquestcard.png",
+    ],
+    "answerindex": 1,
+    "questImageQuestion": "assets/images/iquestcard.png",
+    "questionText": "_ A P A L",
+  },
+  {
+    "options": [
+      "assets/images/aquestcard.png",
+      "assets/images/pquestcard.png",
+      "assets/images/bquestcard.png",
+    ],
+    "answerindex": 1,
+    "questImageQuestion": "assets/images/jquestcard.png",
+    "questionText": "A _ E L",
+  },
+  {
+    "options": [
+      "assets/images/uquestcard.png",
+      "assets/images/wquestcard.png",
+      "assets/images/rquestcard.png",
+    ],
+    "answerindex": 1,
+    "questImageQuestion": "assets/images/kquestcard.png",
+    "questionText": "_ O R T E L",
+  },
+  {
+    "options": [
+      "assets/images/squestcard.png",
+      "assets/images/oquestcard.png",
+      "assets/images/dquestcard.png",
+    ],
+    "answerindex": 2,
+    "questImageQuestion": "assets/images/lquestcard.png",
+    "questionText": "K U _ A",
+  },
+  {
+    "options": [
+      "assets/images/hquestcard.png",
+      "assets/images/iquestcard.png",
+      "assets/images/mquestcard.png",
+    ],
+    "answerindex": 2,
+    "questImageQuestion": "assets/images/mquestcard.png",
+    "questionText": "_ O T O R",
+  },
+  {
+    "options": [
+      "assets/images/uquestcard.png",
+      "assets/images/wquestcard.png",
+      "assets/images/rquestcard.png",
+    ],
+    "answerindex": 2,
+    "questImageQuestion": "assets/images/nquestcard.png",
+    "questionText": "K E _ E T A",
+  },
+  {
+    "options": [
+      "assets/images/zquestcard.png",
+      "assets/images/wquestcard.png",
+      "assets/images/nquestcard.png",
+    ],
+    "answerindex": 0,
+    "questImageQuestion": "assets/images/oquestcard.png",
+    "questionText": "_ E B R A",
+  },
+  {
+    "options": [
+      "assets/images/jquestcard.png",
+      "assets/images/kquestcard.png",
+      "assets/images/lquestcard.png",
+    ],
+    "answerindex": 2,
+    "questImageQuestion": "assets/images/pquestcard.png",
+    "questionText": "M O B I _",
+  },
+  {
+    "options": [
+      "assets/images/hquestcard.png",
+      "assets/images/iquestcard.png",
+      "assets/images/mquestcard.png",
+    ],
+    "answerindex": 1,
+    "questImageQuestion": "assets/images/qquestcard.png",
+    "questionText": "S A P _",
+  },
+  {
+    "options": [
+      "assets/images/zquestcard.png",
+      "assets/images/wquestcard.png",
+      "assets/images/nquestcard.png",
+    ],
+    "answerindex": 2,
+    "questImageQuestion": "assets/images/rquestcard.png",
+    "questionText": "L I L I _",
+  },
+  {
+    "options": [
+      "assets/images/nquestcard.png",
+      "assets/images/yquestcard.png",
+      "assets/images/tquestcard.png",
+    ],
+    "answerindex": 1,
+    "questImageQuestion": "assets/images/squestcard.png",
+    "questionText": "P A _ U N G",
+  },
+  {
+    "options": [
+      "assets/images/squestcard.png",
+      "assets/images/oquestcard.png",
+      "assets/images/dquestcard.png",
+    ],
+    "answerindex": 0,
+    "questImageQuestion": "assets/images/tquestcard.png",
+    "questionText": "P I _ A N G",
+  },
+];
+
+final List<Map<String, dynamic>> questionFillinWordData = [
+  {
+    "options": [
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+    ],
+    "answerindex": 0,
+    "questImageQuestion": "assets/images/akuquestcard.png",
+    "questionText": "assets/images/akucard.png",
+  },
+  {
+    "options": [
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+    ],
+    "answerindex": 1,
+    "questImageQuestion": "assets/images/terimakasihquestcard.png",
+    "questionText": "assets/images/terimakasihcard.png",
+  },
+  {
+    "options": [
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+    ],
+    "answerindex": 2,
+    "questImageQuestion": "assets/images/halloquestcard.png",
+    "questionText": "assets/images/hallocard.png",
+  },
+  {
+    "options": [
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+    ],
+    "answerindex": 2,
+    "questImageQuestion": "assets/images/senangquestcard.png",
+    "questionText": "assets/images/senangcard.png",
+  },
+  {
+    "options": [
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+    ],
+    "answerindex": 0,
+    "questImageQuestion": "assets/images/bisquestcard.png",
+    "questionText": "assets/images/biscard.png",
+  },
+  {
+    "options": [
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+    ],
+    "answerindex": 1,
+    "questImageQuestion": "assets/images/tolongquestcard.png",
+    "questionText": "assets/images/tolongcard.png",
+  },
+  {
+    "options": [
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+    ],
+    "answerindex": 0,
+    "questImageQuestion": "assets/images/senangquestcard.png",
+    "questionText": "assets/images/senangcard.png",
+  },
+  {
+    "options": [
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+    ],
+    "answerindex": 2,
+    "questImageQuestion": "assets/images/terimakasihquestcard.png",
+    "questionText": "assets/images/terimakasihcard.png",
+  },
+  {
+    "options": [
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+    ],
+    "answerindex": 1,
+    "questImageQuestion": "assets/images/namaquestcard.png",
+    "questionText": "assets/images/namacard.png",
+  },
+  {
+    "options": [
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+    ],
+    "answerindex": 1,
+    "questImageQuestion": "assets/images/mobilquestcard.png",
+    "questionText": "assets/images/mobilcard.png",
+  },
+  {
+    "options": [
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+      "assets/images/fillin-bebek.png",
+    ],
+    "answerindex": 0,
+    "questImageQuestion": "assets/images/mauquestcard.png",
+    "questionText": "assets/images/maucard.png",
+  },
+];

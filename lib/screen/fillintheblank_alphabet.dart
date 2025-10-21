@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:syndo/utils/data.dart';
 import 'package:syndo/utils/game_data.dart';
-import 'package:syndo/widgets/quiz/quizboard.dart';
+import 'package:syndo/widgets/fillin/quizboard.dart';
 
 class FillintheblankAlphabet extends StatefulWidget {
   const FillintheblankAlphabet({super.key, required this.questbundle});
@@ -42,6 +43,7 @@ class _FillintheblankAlphabetState extends State<FillintheblankAlphabet> {
 
   @override
   Widget build(BuildContext context) {
+    print(questionData);
     final bool quizSelesai = currentQuest >= widget.questbundle.length;
     final gameData = Provider.of<GameData>(context);
 
@@ -62,21 +64,20 @@ class _FillintheblankAlphabetState extends State<FillintheblankAlphabet> {
             Container(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.width * 0.35,
-              color: const Color.fromARGB(162, 255, 255, 255),
               alignment: Alignment.center,
 
               child:
                   !quizSelesai
-                      ? Quizboard(
+                      ? QuizFillinboard(
                         options: widget.questbundle[currentQuest]["options"],
                         answerindex:
                             widget.questbundle[currentQuest]["answerindex"],
                         questImageQuestion:
                             widget
                                 .questbundle[currentQuest]["questImageQuestion"],
-                        questImageAnswer:
+                        questionText:
                             widget
-                                .questbundle[currentQuest]["questImageAnswer"],
+                                .questbundle[currentQuest]["questionText"],
                         questionStatus: isAnswered,
                         onAnswerSelected: updateCounter,
                         onNext: nextQuestion,
@@ -178,32 +179,6 @@ class _FillintheblankAlphabetState extends State<FillintheblankAlphabet> {
                         ),
                       ),
             ),
-
-            if (!quizSelesai)
-              Positioned(
-                top: -MediaQuery.of(context).size.width * 0.02,
-                child: Container(
-                  width: MediaQuery.of(context).size.width * 0.5,
-                  padding: EdgeInsets.all(
-                    MediaQuery.of(context).size.width * 0.001,
-                  ),
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 212, 129, 10),
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-
-                  child: const Text(
-                    'Pilih Arti Kartu Yang Sesuai',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 24,
-                      color: Colors.white,
-                      fontFamily: 'Baloo',
-                    ),
-                  ),
-                ),
-              ),
           ],
         ),
       ),

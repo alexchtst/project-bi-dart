@@ -28,24 +28,23 @@ class FillintheblankLevelCard extends StatelessWidget {
 
     final int start = (level - 1) * 4;
 
-    // Hitung end aman untuk masing-masing list
     int safeEnd(int start, int length) {
-      if (start >= length) return length; // supaya tidak melebihi batas
+      if (start >= length) return length;
       return (start + 4 <= length) ? start + 4 : length;
     }
 
-    final int endForQuestionData = safeEnd(start, questionData.length);
-    final int endForQuestionWordData = safeEnd(start, questionWordData.length);
+    final int endForQuestionData = safeEnd(start, questionFillinData.length);
+    final int endForQuestionWordData = safeEnd(start, questionFillinWordData.length);
 
     // Ambil sublist secara aman
     final List<Map<String, dynamic>> questions =
         (start < questionData.length)
-            ? questionData.sublist(start, endForQuestionData)
+            ? questionFillinData.sublist(start, endForQuestionData)
             : [];
 
     final List<Map<String, dynamic>> questionwords =
         (start < questionWordData.length)
-            ? questionWordData.sublist(start, endForQuestionWordData)
+            ? questionFillinWordData.sublist(start, endForQuestionWordData)
             : [];
 
     return InkWell(

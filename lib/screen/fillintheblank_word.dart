@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:syndo/utils/game_data.dart';
-import 'package:syndo/widgets/quiz/quizwordboard.dart';
+import 'package:syndo/widgets/fillin/quizwordboard.dart';
 
 class FillintheblankWord extends StatefulWidget {
   const FillintheblankWord({super.key, required this.questbundle});
@@ -67,7 +67,7 @@ class _FillintheblankWordState extends State<FillintheblankWord> {
 
               child:
                   !quizSelesai
-                      ? Quizwordboard(
+                      ? QuizFillinwordboard(
                         options: widget.questbundle[currentQuest]["options"],
                         answerindex:
                             widget.questbundle[currentQuest]["answerindex"],
