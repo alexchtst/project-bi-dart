@@ -93,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 MenuButton(
                   icon: Icons.store,
                   onPressed: () {
-                    Navigator.pushNamed(context, '/coins');
+                    Navigator.pushNamed(context, '/skin-setup');
                   },
                 ),
               ],

@@ -12,6 +12,7 @@ import 'package:syndo/screen/play_screen.dart';
 import 'package:syndo/screen/quiz_flash_card.dart';
 import 'package:syndo/screen/scan.dart';
 import 'package:syndo/screen/scan_screen.dart';
+import 'package:syndo/screen/skin_setup.dart';
 import 'package:syndo/utils/audio_service.dart';
 import 'package:syndo/utils/data_service.dart';
 import 'package:syndo/utils/game_data.dart';
@@ -58,6 +59,7 @@ class MyApp extends StatelessWidget {
           '/mode': (context) => ModeScreen(),
           '/scan': (context) => ScanScreen(),
           '/coins': (context) => CoinScreen(),
+          '/skin-setup': (context) => SkinSetup(),
           // '/study': (context) => StudyScreen(),
           '/memo-evaluation': (context) => MemoEvaluation(),
           '/quiz-flash-card-alphabet': (context) => QuizFlashCard(word: false,),

@@ -39,12 +39,12 @@ class FillintheblankLevelCard extends StatelessWidget {
     // Ambil sublist secara aman
     final List<Map<String, dynamic>> questions =
         (start < questionData.length)
-            ? questionFillinData
+            ? questionFillinData.sublist(start, endForQuestionData)
             : [];
 
     final List<Map<String, dynamic>> questionwords =
         (start < questionWordData.length)
-            ? questionFillinWordData
+            ? questionFillinWordData.sublist(0, endForQuestionWordData)
             : [];
 
     return InkWell(

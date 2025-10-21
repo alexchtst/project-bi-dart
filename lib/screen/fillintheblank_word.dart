@@ -61,7 +61,6 @@ class _FillintheblankWordState extends State<FillintheblankWord> {
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.width * 0.35,
               alignment: Alignment.center,
 
               child:
