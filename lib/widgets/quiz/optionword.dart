@@ -42,7 +42,7 @@ class _QuizOptionState extends State<QuizOptionWord> {
         ),
         if (widget.status && widget.currentIndex == widget.answerIndex)
           Positioned(
-            top: -MediaQuery.of(context).size.width * 0.01,
+            top: 0,
             left: -MediaQuery.of(context).size.width * 0.015,
             child: Icon(
               Icons.check_circle,
@@ -50,13 +50,13 @@ class _QuizOptionState extends State<QuizOptionWord> {
               size: MediaQuery.of(context).size.width * 0.05,
             ),
           ),
-        if (widget.status && widget.currentIndex == widget.answerIndex)
+        if (widget.status && widget.currentIndex != widget.answerIndex)
           Positioned(
-            top: -MediaQuery.of(context).size.width * 0.01,
+            top: 0,
             left: -MediaQuery.of(context).size.width * 0.015,
             child: Icon(
-              Icons.check_circle,
-              color: Colors.green,
+              Icons.dangerous_sharp,
+              color: Colors.red,
               size: MediaQuery.of(context).size.width * 0.05,
             ),
           ),

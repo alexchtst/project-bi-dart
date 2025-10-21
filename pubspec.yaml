@@ -186,7 +186,6 @@ flutter:
     - assets/images/bg-fillin.png
     - assets/images/fillin.png
     
-    
     - assets/images/fillin-bebek.png
     - assets/images/fillin-bebek.png
     - assets/images/fillin-meja.png
@@ -208,6 +207,32 @@ flutter:
     - assets/images/fillin-lilin.png
     - assets/images/fillin-payung.png
     - assets/images/fillin-pisang.png
+
+    - assets/images/bagusbaik.png
+    - assets/images/belajar.png
+    - assets/images/berapa.png
+    - assets/images/berteman.png
+    - assets/images/bertemu.png
+    - assets/images/bus-fillin.png
+    - assets/images/dimana.png
+    - assets/images/jumat.png
+    - assets/images/kamis.png
+    - assets/images/kapan.png
+    - assets/images/malam.png
+    - assets/images/minggu.png
+    - assets/images/pagi.png
+    - assets/images/perkenalkan.png
+    - assets/images/rabu.png
+    - assets/images/sabtu.png
+    - assets/images/samasama.png
+    - assets/images/sampai.png
+    - assets/images/sehat.png
+    - assets/images/selamat.png
+    - assets/images/selasa.png
+    - assets/images/senin.png
+    - assets/images/sore.png
+    - assets/images/siang.png
+    - assets/images/siapa.png
 
     - assets/audio/BACKSOUND_GAMELAN_INDONESIAN_MUSIC_ETHNIC_CULTURE.mp3
 
