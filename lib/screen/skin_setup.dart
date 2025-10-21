@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:syndo/screen/skin_review.dart';
@@ -23,9 +25,135 @@ class CharacterComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size.width;
+    final gameData = Provider.of<GameData>(context, listen: false);
+    final characterProvider = Provider.of<CharacterProvider>(
+      context,
+      listen: false,
+    );
 
     return InkWell(
-      onTap: onTap,
+      onTap: () async {
+        if (lockStatus) {
+          await showDialog(
+            context: context,
+            builder: (context) {
+              final size = MediaQuery.of(context).size.width;
+
+              return Dialog(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Color.fromARGB(255, 250, 206, 84),
+                        Color.fromARGB(255, 250, 158, 12),
+                      ],
+                    ),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  padding: EdgeInsets.all(size * 0.03),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        'Buka Karakter?',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: 'Baloo',
+                          fontWeight: FontWeight.bold,
+                          fontSize: size * 0.04,
+                          color: Colors.brown[900],
+                        ),
+                      ),
+                      SizedBox(height: size * 0.02),
+                      Text(
+                        'Kamu ingin membeli karakter "$name" seharga $price koin?',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: 'Baloo',
+                          fontSize: size * 0.03,
+                          color: Colors.brown[800],
+                        ),
+                      ),
+                      SizedBox(height: size * 0.03),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.redAccent,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                            ),
+                            onPressed: () => Navigator.pop(context),
+                            child: const Text(
+                              'Batal',
+                              style: TextStyle(
+                                fontFamily: 'Baloo',
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.green.shade700,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                            ),
+                            onPressed: () async {
+                              final balance = gameData.coinBalance;
+                              if (balance >= price) {
+                                gameData.subtractCoins(price);
+                                await characterProvider.unlockCharacterByPrice(
+                                  name,
+                                  balance,
+                                );
+                                Navigator.pop(context);
+
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    backgroundColor: Colors.green.shade700,
+                                    content: Text(
+                                      'Karakter "$name" berhasil dibuka!',
+                                    ),
+                                  ),
+                                );
+                              } else {
+                                Navigator.pop(context);
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    backgroundColor: Colors.redAccent,
+                                    content: Text('Koin kamu tidak cukup!'),
+                                  ),
+                                );
+                              }
+                            },
+                            child: const Text(
+                              'Beli',
+                              style: TextStyle(
+                                fontFamily: 'Baloo',
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            },
+          );
+        } else {
+          onTap();
+        }
+      },
       child: Stack(
         children: [
           Container(
@@ -42,7 +170,6 @@ class CharacterComponent extends StatelessWidget {
             ),
           ),
 
-          // 🔒 Overlay lock
           if (lockStatus)
             Container(
               width: size * 0.15,
@@ -236,7 +363,6 @@ class _SkinSetupState extends State<SkinSetup> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 🔸 Coin Balance
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [

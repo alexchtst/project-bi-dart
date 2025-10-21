@@ -86,10 +86,10 @@ class _SkinReviewState extends State<SkinReview> {
                       height: screenWidth * 0.30,
                     ),
 
-                    const Icon(
+                    Icon(
                       Icons.center_focus_weak_sharp,
                       color: Colors.white,
-                      size: 80,
+                      size: screenWidth * 0.1,
                     ),
                   ],
                 ),
