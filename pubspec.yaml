@@ -246,6 +246,17 @@ flutter:
     - assets/images/terimakasih.png
     - assets/images/tidakmau.png
     - assets/images/tolong.png
+    
+    - assets/images/bg-bali-char.png
+    - assets/images/bg-batak-char.png
+    - assets/images/bg-jawa-char.png
+    
+    - assets/images/arin-bali.png
+    - assets/images/arin-batak.png
+    - assets/images/arin-dayak.png
+    - assets/images/arin-jawa.png
+    - assets/images/giel-bali.png
+    - assets/images/giel-jawa.png
 
     - assets/audio/BACKSOUND_GAMELAN_INDONESIAN_MUSIC_ETHNIC_CULTURE.mp3
 

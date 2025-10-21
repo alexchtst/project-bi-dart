@@ -14,6 +14,7 @@ import 'package:syndo/screen/scan.dart';
 import 'package:syndo/screen/scan_screen.dart';
 import 'package:syndo/screen/skin_setup.dart';
 import 'package:syndo/utils/audio_service.dart';
+import 'package:syndo/utils/char_data.dart';
 import 'package:syndo/utils/data_service.dart';
 import 'package:syndo/utils/game_data.dart';
 import 'package:syndo/utils/scanner_provider.dart';
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => DataProvider()..resetToDefault()),
         ChangeNotifierProvider(create: (context) => ScannerProvider()),
         ChangeNotifierProvider(create: (context) => GameData()),
+        ChangeNotifierProvider(create: (context) => CharacterProvider()),
       ],
       child: MaterialApp(
         title: 'Lingo Hands',
