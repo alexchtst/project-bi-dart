@@ -269,6 +269,23 @@ flutter:
     - assets/images/giel-bali.png
     - assets/images/giel-jawa.png
 
+    - assets/images/story-smtr-berteman.png
+    - assets/images/story-smtr-jumat.png
+    - assets/images/story-smtr-kamis.png
+    - assets/images/story-smtr-kd-anjing.png
+    - assets/images/story-smtr-kd-ayam.png
+    - assets/images/story-smtr-kd-bebek.png
+    - assets/images/story-smtr-kd-kucing.png
+    - assets/images/story-smtr-minggu.png
+    - assets/images/story-smtr-rabu.png
+    - assets/images/story-smtr-sabtu.png
+    - assets/images/story-smtr-selasa.png
+    - assets/images/story-smtr-senin.png
+    - assets/images/story-smtr-pisang.png
+    - assets/images/story-smtr-apel.png
+    - assets/images/story-smtr-jeruk.png
+    - assets/images/story-smtr-anggur.png
+
     - assets/audio/BACKSOUND_GAMELAN_INDONESIAN_MUSIC_ETHNIC_CULTURE.mp3
 
     - assets/video/IMG_3096.mp4
