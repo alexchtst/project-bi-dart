@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:syndo/screen/flash_card.dart';
 import 'package:syndo/screen/gesture_recognition.dart';
 import 'package:syndo/screen/fillintheblank_level.dart';
+import 'package:syndo/widgets/button/navigation_button.dart';
 import 'package:syndo/widgets/card/scanner_card.dart';
 
 class FillBlank extends StatelessWidget {
@@ -22,22 +23,38 @@ class FillBlank extends StatelessWidget {
       child: Container(
         width: MediaQuery.of(context).size.width * 0.4,
         height: MediaQuery.of(context).size.width * 0.19,
-        padding: EdgeInsets.all(20.0),
+        padding: EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20.0),
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'FILL IN THE BLANK SPACE',
-              style: TextStyle(
-                fontFamily: 'Chewy',
-                fontSize: MediaQuery.of(context).size.width * 0.025,
-                fontWeight: FontWeight.bold,
-                color: const Color.fromARGB(255, 88, 81, 161),
+            Container(
+              padding: EdgeInsets.symmetric(
+                vertical: MediaQuery.of(context).size.width * 0.001,
+                horizontal: MediaQuery.of(context).size.width * 0.005,
+              ),
+              margin: EdgeInsets.only(
+                bottom: MediaQuery.of(context).size.width * 0.01,
+              ),
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 255, 204, 62),
+                    Color.fromARGB(255, 250, 158, 12),
+                  ],
+                ),
+                borderRadius: BorderRadius.circular(5.0),
+              ),
+              child: Text(
+                'FILL IN THE BLANK SPACE',
+                style: TextStyle(
+                  fontFamily: 'Chewy',
+                  fontSize: MediaQuery.of(context).size.width * 0.025,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
             ),
             SizedBox(height: MediaQuery.of(context).size.width * 0.005),
@@ -54,10 +71,16 @@ class FillBlank extends StatelessWidget {
 }
 
 class QuizFlashCard extends StatefulWidget {
-  const QuizFlashCard({super.key, this.nogesture = false, this.word = false});
+  const QuizFlashCard({
+    super.key,
+    this.nogesture = false,
+    this.word = false,
+    required this.isStudyMode,
+  });
 
   final bool nogesture;
   final bool word;
+  final bool isStudyMode;
 
   @override
   State<QuizFlashCard> createState() => _QuizFlashCardState();
@@ -81,18 +104,19 @@ class _QuizFlashCardState extends State<QuizFlashCard> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            if (widget.isStudyMode)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  if (widget.isStudyMode) FlashCardComp(word: widget.word),
+                  if (widget.isStudyMode) FillBlank(word: widget.word),
+                ],
+              ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                FlashCardComp(word: widget.word),
-                FillBlank(word: widget.word),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                if (!widget.nogesture) const GestureRecognition(),
-                ScannerCard(),
+                if (widget.isStudyMode) GestureRecognition(),
+                ScannerCard(isParentmemo: !widget.isStudyMode),
               ],
             ),
           ],

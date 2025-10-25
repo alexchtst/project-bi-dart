@@ -27,13 +27,13 @@ class _MemoEvaluationState extends State<MemoEvaluation> {
           children: [
             GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/alpahbet-word');
+                Navigator.pushNamed(context, '/quiz-flash-card');
               },
               child: Image.asset('assets/images/evaluation-icon.png'),
             ),
             GestureDetector(
                onTap: () {
-                Navigator.pushNamed(context, '/alpahbet-word');
+                Navigator.pushNamed(context, '/memo-landing');
               },
               child: Image.asset('assets/images/memorization-icon.png')
             ),

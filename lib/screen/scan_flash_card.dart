@@ -10,9 +10,14 @@ import 'package:syndo/utils/data_service.dart';
 import 'package:syndo/utils/scanner_provider.dart';
 
 class ScanFlashCard extends StatefulWidget {
-  const ScanFlashCard({super.key, required this.name});
+  const ScanFlashCard({
+    super.key,
+    required this.name,
+    required this.isParentmemo,
+  });
 
   final String name;
+  final bool isParentmemo;
 
   @override
   State<ScanFlashCard> createState() => _ScanState();
@@ -205,7 +210,10 @@ class _ScanState extends State<ScanFlashCard> {
       if (!scannerProvider.hasError) {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (_) => const MediaDisplayScreen()),
+          MaterialPageRoute(
+            builder:
+                (_) => MediaDisplayScreen(isParentmemo: widget.isParentmemo),
+          ),
         );
       } else {
         ScaffoldMessenger.of(context).showSnackBar(

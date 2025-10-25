@@ -12,7 +12,7 @@ class FlashCardComp extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width * 0.4,
       height: MediaQuery.of(context).size.width * 0.19,
-      padding: EdgeInsets.all(20.0),
+      padding: EdgeInsets.all(10.0),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20.0),
@@ -21,46 +21,60 @@ class FlashCardComp extends StatelessWidget {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => FlashCardLevel(word: word,)),
+            MaterialPageRoute(builder: (context) => FlashCardLevel(word: word)),
           );
         },
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'FLASHCARD',
-              style: TextStyle(
-                fontFamily: 'Chewy',
-                fontSize: MediaQuery.of(context).size.width * 0.025,
-                fontWeight: FontWeight.bold,
-                color: const Color.fromARGB(255, 88, 81, 161),
+            Container(
+              padding: EdgeInsets.symmetric(
+                vertical: MediaQuery.of(context).size.width * 0.001,
+                horizontal: MediaQuery.of(context).size.width * 0.005,
+              ),
+              margin: EdgeInsets.only(bottom: MediaQuery.of(context).size.width * 0.01),
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 255, 204, 62),
+                    Color.fromARGB(255, 250, 158, 12),
+                  ],
+                ),
+                borderRadius: BorderRadius.circular(5.0),
+              ),
+              child: Text(
+                'FLASHCARD',
+                style: TextStyle(
+                  fontFamily: 'Chewy',
+                  fontSize: MediaQuery.of(context).size.width * 0.025,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
             ),
             SizedBox(height: MediaQuery.of(context).size.width * 0.005),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Image.asset(
                   'assets/images/flashcard1.png',
                   fit: BoxFit.fitWidth,
-                  width: MediaQuery.of(context).size.width * 0.05,
+                  width: MediaQuery.of(context).size.width * 0.06,
                 ),
                 Image.asset(
                   'assets/images/flashcard2.png',
                   fit: BoxFit.fitWidth,
-                  width: MediaQuery.of(context).size.width * 0.05,
+                  width: MediaQuery.of(context).size.width * 0.06,
                 ),
                 Image.asset(
                   'assets/images/flashcard3.png',
                   fit: BoxFit.fitWidth,
-                  width: MediaQuery.of(context).size.width * 0.05,
+                  width: MediaQuery.of(context).size.width * 0.06,
                 ),
                 Image.asset(
                   'assets/images/flashcard4.png',
                   fit: BoxFit.fitWidth,
-                  width: MediaQuery.of(context).size.width * 0.05,
+                  width: MediaQuery.of(context).size.width * 0.06,
                 ),
               ],
             ),

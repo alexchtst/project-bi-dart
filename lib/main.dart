@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:syndo/screen/alphabet_word.dart';
 import 'package:syndo/screen/chat_bot.dart';
 import 'package:syndo/screen/coin_screen.dart';
 import 'package:syndo/screen/gesture_prediction.dart';
@@ -63,10 +62,10 @@ class MyApp extends StatelessWidget {
           '/coins': (context) => CoinScreen(),
           '/skin-setup': (context) => SkinSetup(),
           // '/study': (context) => StudyScreen(),
+          // '/alpahbet-word': (context) => AlphabetWord(),
           '/memo-evaluation': (context) => MemoEvaluation(),
-          '/quiz-flash-card-alphabet': (context) => QuizFlashCard(word: false,),
-          '/quiz-flash-card-word': (context) => QuizFlashCard(nogesture: false, word: true,),
-          '/alpahbet-word': (context) => AlphabetWord(),
+          '/quiz-flash-card': (context) => QuizFlashCard(word: false, isStudyMode: true),
+          '/memo-landing': (context) => QuizFlashCard(word: false, isStudyMode: false),
           '/chat-bot' : (context) => ChatBot(),
           '/gesture-detection' : (context) => GesturePrediction(),
         },

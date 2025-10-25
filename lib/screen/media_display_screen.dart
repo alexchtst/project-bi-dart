@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:syndo/utils/scanner_provider.dart';
+import 'package:syndo/widgets/button/navigation_button.dart';
 import 'package:video_player/video_player.dart';
 
 class MediaDisplayScreen extends StatelessWidget {
-  const MediaDisplayScreen({super.key});
+  const MediaDisplayScreen({super.key, required this.isParentmemo});
+
+  final bool isParentmemo;
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +45,19 @@ class MediaDisplayScreen extends StatelessWidget {
           child: Stack(
             alignment: Alignment.center,
             children: [
+              Positioned(
+                left: 0,
+                top: 0,
+                child: NavigationButton(
+                  onTap: () {
+                    if (isParentmemo) {
+                      Navigator.pop(context, '/memo-landing');
+                    } else {
+                      Navigator.pop(context, '/quiz-flash-card');
+                    }
+                  },
+                ),
+              ),
               Positioned(
                 left: size.height * 0.1,
                 right: size.height * 0.1,
@@ -81,7 +97,11 @@ class MediaDisplayScreen extends StatelessWidget {
                       label: "Scan Lagi",
                       icon: Icons.qr_code_scanner,
                       onPressed: () {
-                        Navigator.pushNamed(context, '/quiz-flash-card-alphabet');
+                        if (isParentmemo) {
+                          Navigator.pop(context, '/memo-landing');
+                        } else {
+                          Navigator.pop(context, '/quiz-flash-card');
+                        }
                       },
                     ),
                   ],
@@ -112,8 +132,58 @@ class MediaDisplayScreen extends StatelessWidget {
                   scanner.detectedCode,
                   fit: BoxFit.fill,
                   errorBuilder:
-                      (_, __, ___) =>
-                          const Text('Tidak bisa menampilkan gambar.'),
+                      (_, __, ___) => Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(height: MediaQuery.of(context).size.width * 0.02,),
+                          Row(
+                            children: [
+                              NavigationButton(
+                                onTap: () {
+                                  if (isParentmemo) {
+                                    Navigator.pop(context, '/memo-landing');
+                                  } else {
+                                    Navigator.pop(
+                                      context,
+                                      '/quiz-flash-card',
+                                    );
+                                  }
+                                },
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: MediaQuery.of(context).size.width * 0.02,),
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.3,
+                            padding: EdgeInsets.all(
+                              MediaQuery.of(context).size.width * 0.01,
+                            ),
+                            margin: EdgeInsets.only(
+                              bottom: MediaQuery.of(context).size.width * 0.01,
+                            ),
+                            decoration: BoxDecoration(
+                              gradient: const LinearGradient(
+                                colors: [
+                                  Color.fromARGB(255, 255, 204, 62),
+                                  Color.fromARGB(255, 250, 158, 12),
+                                ],
+                              ),
+                              borderRadius: BorderRadius.circular(15.0),
+                            ),
+                            child: Text(
+                              'Tidak bisa menampilkan gambar.',
+                              style: TextStyle(
+                                fontFamily: 'Baloo',
+                                fontSize:
+                                    MediaQuery.of(context).size.width * 0.025,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
+                      ),
                 ),
               ),
             ),
@@ -122,7 +192,13 @@ class MediaDisplayScreen extends StatelessWidget {
               label: "Scan Lagi",
               icon: Icons.qr_code_scanner,
               onPressed: () {
-                Navigator.pushNamed(context, '/quiz-flash-card-alphabet');
+                if (isParentmemo) {
+                  if (isParentmemo) {
+                    Navigator.pop(context, '/memo-landing');
+                  } else {
+                    Navigator.pop(context, '/quiz-flash-card');
+                  }
+                }
               },
             ),
             const SizedBox(height: 40),
