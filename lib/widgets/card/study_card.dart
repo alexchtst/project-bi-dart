@@ -14,6 +14,34 @@ class StudyCard extends StatelessWidget {
   final String title;
   final bool locked;
 
+  Widget buildImage(String imagePath, {double? maxHeight}) {
+    final imageWidget =
+        (imagePath.startsWith('http') || imagePath.startsWith('https'))
+            ? Image.network(
+              imagePath,
+              fit: BoxFit.fitWidth,
+              loadingBuilder: (context, child, progress) {
+                if (progress == null) return child;
+                return const Center(child: CircularProgressIndicator());
+              },
+              errorBuilder: (context, error, stackTrace) {
+                return const Icon(Icons.error, color: Colors.red);
+              },
+            )
+            : Image.asset(
+              imagePath,
+              fit: BoxFit.fitWidth,
+              errorBuilder: (context, error, stackTrace) {
+                return const Icon(Icons.broken_image, color: Colors.red);
+              },
+            );
+
+    return ConstrainedBox(
+      constraints: BoxConstraints(maxHeight: maxHeight ?? 180),
+      child: imageWidget,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -44,7 +72,10 @@ class StudyCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Image.asset(imagePath.toString(), fit: BoxFit.fitWidth),
+                  buildImage(
+                    imagePath.toString(),
+                    maxHeight: MediaQuery.of(context).size.width * 0.2,
+                  ),
                   Container(
                     width: MediaQuery.of(context).size.width * 0.2,
                     padding: EdgeInsets.all(5.0),

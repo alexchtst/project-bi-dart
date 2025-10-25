@@ -64,35 +64,31 @@ class _SkinReviewState extends State<SkinReview> {
 
             Container(
               decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.yellow,
-                  width: 10,
-                ),
+                border: Border.all(color: Colors.yellow, width: 10),
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Expanded(
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Image.asset(
-                      selectedBackground,
-                      fit: BoxFit.contain,
-                      width: screenWidth * 0.6,
-                    ),
 
-                    Image.asset(
-                      widget.imgPath,
-                      fit: BoxFit.contain,
-                      height: screenWidth * 0.30,
-                    ),
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Image.asset(
+                    selectedBackground,
+                    fit: BoxFit.contain,
+                    width: screenWidth * 0.6,
+                  ),
 
-                    Icon(
-                      Icons.center_focus_weak_sharp,
-                      color: Colors.white,
-                      size: screenWidth * 0.1,
-                    ),
-                  ],
-                ),
+                  Image.asset(
+                    widget.imgPath,
+                    fit: BoxFit.contain,
+                    height: screenWidth * 0.30,
+                  ),
+
+                  Icon(
+                    Icons.center_focus_weak_sharp,
+                    color: Colors.white,
+                    size: screenWidth * 0.1,
+                  ),
+                ],
               ),
             ),
           ],

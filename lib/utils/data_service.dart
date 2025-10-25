@@ -260,7 +260,8 @@ class DataProvider extends ChangeNotifier {
         type: "studyoption",
         name: "BERWISATA JAKARTA",
         isLocked: false,
-        imgPath: 'assets/images/berwisata.png',
+        imgPath:
+            'https://drive.google.com/uc?export=view&id=1SZJfbpElkL0kwzS4J4Xxbj7IMnrXDCBX',
         region: "jawa",
       ),
       DataCard(
@@ -274,28 +275,33 @@ class DataProvider extends ChangeNotifier {
         type: "studyoption",
         name: "PANTAI",
         isLocked: false,
-        imgPath: 'assets/images/bersekolah.png',
+        imgPath:
+            'https://drive.google.com/uc?export=view&id=1dAFWyX8O_WRk0vBhwAkH6H6RqiffPOYB',
         region: "bali",
       ),
       DataCard(
         type: "studyoption",
         name: "MONKEY FOREST",
         isLocked: false,
-        imgPath: 'assets/images/bersekolah.png',
+        imgPath:
+            'https://drive.google.com/uc?export=view&id=1rbJ9_rqV9wQ-shP5DDhpgA1pU1BuztKA',
         region: "bali",
       ),
       DataCard(
         type: "studyoption",
         name: "TAMAN",
         isLocked: false,
-        imgPath: 'assets/images/bersekolah.png',
+        imgPath:
+            'https://drive.google.com/uc?export=view&id=1Q3ZnBmFoLsYl86ZDWA96uo8JeQDc3Y9-',
+
         region: "smtr",
       ),
       DataCard(
         type: "studyoption",
         name: "ZOO",
         isLocked: false,
-        imgPath: 'assets/images/bersekolah.png',
+        imgPath:
+            'https://drive.google.com/uc?export=view&id=1sDjFrENwKfn_ONFCtNYXJWiQ9Mm6uIzC',
         region: "smtr",
       ),
     ];
