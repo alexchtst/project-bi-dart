@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:syndo/screen/alphabet_word.dart';
-import 'package:syndo/screen/flash_card_level.dart';
 
 // flash card
 class FlashCardComp extends StatelessWidget {

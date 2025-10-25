@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syndo/screen/info_screen.dart';
 import 'package:syndo/utils/audio_service.dart';
 import 'package:syndo/widgets/button/menu_button.dart';
 
@@ -74,7 +75,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                 ),
                 SizedBox(width: 20.0),
-                MenuButton(icon: Icons.info_outline),
+                MenuButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => InfoScreen()),
+                    );
+                  },
+                  icon: Icons.info_outline,
+                ),
               ],
             ),
             SizedBox(height: 20.0),

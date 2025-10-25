@@ -25,6 +25,10 @@ class _GesturePredictionState extends State<GesturePrediction> {
   void initState() {
     super.initState();
     _setupCamera();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _showAgreementDialog();
+    });
   }
 
   Future<void> _setupCamera() async {
@@ -88,6 +92,86 @@ class _GesturePredictionState extends State<GesturePrediction> {
     } catch (e) {
       debugPrint("Error saat mengirim gambar: $e");
     }
+  }
+
+  void _showAgreementDialog() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) {
+        final size = MediaQuery.of(context).size;
+
+        return Dialog(
+          backgroundColor: Colors.transparent,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(size.width * 0.04),
+          ),
+          child: Container(
+            width: size.width * 0.55,
+            padding: EdgeInsets.all(size.width * 0.05),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(size.width * 0.04),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.3),
+                  blurRadius: 10,
+                  offset: const Offset(0, 5),
+                ),
+              ],
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  'GESTURE RECOGNITION',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: 'Baloo',
+                    fontSize: size.width * 0.04,
+                    color: Color.fromARGB(255, 250, 158, 12),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                Text(
+                  'PASTIKAN TEMAN MENUNJUKAN GERAKAN YANG JELAS DENGAN PENERANGAN YANG CUKUP',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: 'Baloo',
+                    fontSize: size.width * 0.025,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Container(
+                  padding: EdgeInsets.symmetric(
+                    vertical: size.width * 0.02,
+                    horizontal: size.width * 0.05,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.green[400],
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Text(
+                      'MENGERTI',
+                      style: TextStyle(
+                        fontFamily: 'Chewy',
+                        fontSize: size.width * 0.025,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
   }
 
   @override

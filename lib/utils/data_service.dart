@@ -260,7 +260,7 @@ class DataProvider extends ChangeNotifier {
         type: "studyoption",
         name: "BERWISATA JAKARTA",
         isLocked: false,
-        imgPath: 'assets/images/bermain.png',
+        imgPath: 'assets/images/berwisata.png',
         region: "jawa",
       ),
       DataCard(
