@@ -43,7 +43,7 @@ class _AlphabetWordState extends State<AlphabetWord> {
                 borderRadius: BorderRadius.circular(5.0),
               ),
               child: Text(
-                widget.isFillinTheBlank ? 'FILL IN THE BLANK' : 'FLASH CARDS',
+                widget.isFillinTheBlank ? 'LENGKAPI BAGIAN KOSONG' : 'FLASH CARDS',
                 style: TextStyle(
                   fontFamily: 'Chewy',
                   fontSize: MediaQuery.of(context).size.width * 0.025,

@@ -57,7 +57,7 @@ class _FillBlankState extends State<FillBlank> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'FILL IN THE BLANK SPACE',
+            'LENGKAPI BAGIAN KOSONG',
             style: TextStyle(
               fontFamily: 'Chewy',
               fontSize: 20.0,
