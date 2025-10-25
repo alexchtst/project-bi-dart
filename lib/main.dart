@@ -62,7 +62,6 @@ class MyApp extends StatelessWidget {
           '/coins': (context) => CoinScreen(),
           '/skin-setup': (context) => SkinSetup(),
           // '/study': (context) => StudyScreen(),
-          // '/alpahbet-word': (context) => AlphabetWord(),
           '/memo-evaluation': (context) => MemoEvaluation(),
           '/quiz-flash-card': (context) => QuizFlashCard(word: false, isStudyMode: true),
           '/memo-landing': (context) => QuizFlashCard(word: false, isStudyMode: false),

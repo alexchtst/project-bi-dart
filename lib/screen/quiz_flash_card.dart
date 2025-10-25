@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:syndo/screen/alphabet_word.dart';
 import 'package:syndo/screen/flash_card.dart';
 import 'package:syndo/screen/gesture_recognition.dart';
-import 'package:syndo/screen/fillintheblank_level.dart';
-import 'package:syndo/widgets/button/navigation_button.dart';
 import 'package:syndo/widgets/card/scanner_card.dart';
 
 class FillBlank extends StatelessWidget {
-  const FillBlank({super.key, required this.word});
-  final bool word;
+  const FillBlank({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +14,7 @@ class FillBlank extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => FillintheblankLevel(word: word),
+            builder: (context) => AlphabetWord(isFillinTheBlank: true,),
           ),
         );
       },
@@ -108,8 +106,8 @@ class _QuizFlashCardState extends State<QuizFlashCard> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  if (widget.isStudyMode) FlashCardComp(word: widget.word),
-                  if (widget.isStudyMode) FillBlank(word: widget.word),
+                  if (widget.isStudyMode) FlashCardComp(),
+                  if (widget.isStudyMode) FillBlank(),
                 ],
               ),
             Row(

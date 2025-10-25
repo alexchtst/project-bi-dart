@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:syndo/screen/alphabet_word.dart';
 import 'package:syndo/screen/flash_card_level.dart';
 
 // flash card
 class FlashCardComp extends StatelessWidget {
-  const FlashCardComp({super.key, this.word = true});
-
-  final bool word;
+  const FlashCardComp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +20,9 @@ class FlashCardComp extends StatelessWidget {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => FlashCardLevel(word: word)),
+            MaterialPageRoute(
+              builder: (context) => AlphabetWord(isFillinTheBlank: false),
+            ),
           );
         },
         child: Column(
@@ -31,7 +32,9 @@ class FlashCardComp extends StatelessWidget {
                 vertical: MediaQuery.of(context).size.width * 0.001,
                 horizontal: MediaQuery.of(context).size.width * 0.005,
               ),
-              margin: EdgeInsets.only(bottom: MediaQuery.of(context).size.width * 0.01),
+              margin: EdgeInsets.only(
+                bottom: MediaQuery.of(context).size.width * 0.01,
+              ),
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
                   colors: [

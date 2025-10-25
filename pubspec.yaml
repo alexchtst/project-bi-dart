@@ -54,8 +54,8 @@ flutter:
     - assets/images/quiz-flash-card-background.png
     - assets/images/evaluation-icon.png
     - assets/images/memorization-icon.png
-    - assets/images/alphabet-icon.png
     - assets/images/alphabet-words-background.png
+    - assets/images/alphabet-icon.png
     - assets/images/word-icon.png
     - assets/images/flashcard1.png
     - assets/images/flashcard2.png
