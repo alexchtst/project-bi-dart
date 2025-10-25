@@ -3,7 +3,7 @@ import 'package:syndo/widgets/button/navigation_button.dart';
 import 'package:syndo/widgets/card/flashcard_level_card.dart';
 
 class FlashCardLevel extends StatefulWidget {
-  const FlashCardLevel({super.key, this.word = true});
+  const FlashCardLevel({super.key, required this.word});
 
   final bool word;
 

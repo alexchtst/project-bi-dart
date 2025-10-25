@@ -21,6 +21,7 @@ dependencies:
   http: ^1.1.0
   permission_handler: ^11.3.0
   flutter_launcher_icons: ^0.14.4
+  cached_network_image: ^3.3.1
 
 flutter_launcher_icons:
   android: "launcher_icon"
@@ -142,6 +143,8 @@ flutter:
     - assets/images/becakquestcard.png
     - assets/images/biscard.png
     - assets/images/bisquestcard.png
+    - assets/images/tolongquestcard.png
+    - assets/images/tolongcard.png
     - assets/images/hallocard.png
     - assets/images/halloquestcard.png
     - assets/images/maucard.png
@@ -269,7 +272,7 @@ flutter:
     - assets/audio/BACKSOUND_GAMELAN_INDONESIAN_MUSIC_ETHNIC_CULTURE.mp3
 
     - assets/video/IMG_3096.mp4
-
+    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

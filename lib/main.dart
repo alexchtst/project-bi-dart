@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => CharacterProvider()),
       ],
       child: MaterialApp(
-        title: 'Lingo Hands',
+        title: 'Syndo',
         debugShowCheckedModeBanner: false,
         showSemanticsDebugger: false,
         initialRoute: '/',

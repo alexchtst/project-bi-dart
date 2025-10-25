@@ -22,15 +22,51 @@ class Quizwordboard extends StatelessWidget {
   final Function(int userAns, int ans) onAnswerSelected;
   final VoidCallback onNext;
 
+  Widget buildImage(
+    String path, {
+    double? height,
+    double? width,
+    BoxFit fit = BoxFit.contain,
+  }) {
+    if (path.startsWith('http') || path.startsWith('https')) {
+      return Image.network(
+        path,
+        height: height,
+        width: width,
+        fit: fit,
+        loadingBuilder: (context, child, progress) {
+          if (progress == null) return child;
+          return const Center(child: CircularProgressIndicator());
+        },
+        errorBuilder: (context, error, stackTrace) {
+          debugPrint('❌ Failed to load network image: $path');
+          return const Icon(Icons.broken_image, color: Colors.red);
+        },
+      );
+    } else {
+      return Image.asset(
+        path,
+        height: height,
+        width: width,
+        fit: fit,
+        errorBuilder: (context, error, stackTrace) {
+          debugPrint('❌ Failed to load asset image: $path');
+          return const Icon(Icons.broken_image, color: Colors.red);
+        },
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset(
+        buildImage(
           questionStatus ? questImageAnswer : questImageQuestion,
           height: MediaQuery.of(context).size.width * 0.25,
+          fit: BoxFit.fitWidth,
         ),
         SizedBox(width: MediaQuery.of(context).size.width * 0.1),
         Column(

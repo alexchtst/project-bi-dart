@@ -26,32 +26,36 @@ class FlashcardLevelCard extends StatelessWidget {
 
     final int start = (level - 1) * 4;
 
-    // Hitung end aman untuk masing-masing list
+    // ✅ Fungsi aman untuk menentukan batas akhir sublist
     int safeEnd(int start, int length) {
-      if (start >= length) return length; // supaya tidak melebihi batas
-      return (start + 4 <= length) ? start + 4 : length;
+      if (start >= length) return length; // kalau start di luar batas
+      final end = start + 4;
+      return end > length ? length : end;
     }
 
+    // ✅ Hitung end berdasarkan panjang masing-masing data
     final int endForQuestionData = safeEnd(start, questionData.length);
     final int endForQuestionWordData = safeEnd(start, questionWordData.length);
 
-    // Ambil sublist secara aman
+    // ✅ Ambil sublist hanya jika start masih valid
     final List<Map<String, dynamic>> questions =
-        (start < questionData.length)
+        (start < questionData.length && start < endForQuestionData)
             ? questionData.sublist(start, endForQuestionData)
             : [];
 
     final List<Map<String, dynamic>> questionwords =
-        (start < questionWordData.length)
+        (start < questionWordData.length && start < endForQuestionWordData)
             ? questionWordData.sublist(start, endForQuestionWordData)
             : [];
 
-    // Debug log (opsional)
+    // ✅ Debug log biar bisa kamu cek
+    print('=================================================');
     print('start: $start');
     print('endForQuestionData: $endForQuestionData');
     print('endForQuestionWordData: $endForQuestionWordData');
     print('questions.length: ${questions.length}');
     print('questionwords.length: ${questionwords.length}');
+    print('=================================================');
 
     return InkWell(
       onTap:
@@ -138,6 +142,5 @@ class FlashcardLevelCard extends StatelessWidget {
         ],
       ),
     );
-  
   }
 }
