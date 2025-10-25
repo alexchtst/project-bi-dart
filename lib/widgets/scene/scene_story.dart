@@ -99,6 +99,32 @@ class ActorHeader extends StatelessWidget {
     required this.isAnswered,
   });
 
+  Widget buildImage(String imagePath, double width) {
+    if (imagePath.startsWith('http') || imagePath.startsWith('https')) {
+      return Image.network(
+        imagePath,
+        fit: BoxFit.contain,
+        width: width,
+        loadingBuilder: (context, child, progress) {
+          if (progress == null) return child;
+          return const Center(child: CircularProgressIndicator());
+        },
+        errorBuilder: (context, error, stackTrace) {
+          return const Icon(Icons.error, color: Colors.red);
+        },
+      );
+    } else {
+      return Image.asset(
+        imagePath,
+        fit: BoxFit.contain,
+        width: width,
+        errorBuilder: (context, error, stackTrace) {
+          return const Icon(Icons.broken_image, color: Colors.red);
+        },
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -126,11 +152,7 @@ class ActorHeader extends StatelessWidget {
                   Positioned(
                     left: screenWidth * 0.18,
                     top: screenWidth * 0.012,
-                    child: Image.asset(
-                      showImageArin,
-                      width: screenWidth * 0.20,
-                      fit: BoxFit.contain,
-                    ),
+                    child: buildImage(showImageArin, screenWidth * 0.15),
                   )
                 else
                   const SizedBox(width: 0),
@@ -154,11 +176,7 @@ class ActorHeader extends StatelessWidget {
                   Positioned(
                     left: screenWidth * 0.21,
                     top: screenWidth * 0.02,
-                    child: Image.asset(
-                      showImageGiel,
-                      width: screenWidth * 0.15,
-                      fit: BoxFit.contain,
-                    ),
+                    child: buildImage(showImageGiel, screenWidth * 0.15),
                   )
                 else
                   const SizedBox(width: 0),
@@ -203,6 +221,30 @@ class _OptionFromAnswerState extends State<OptionFromAnswer> {
     });
   }
 
+  Widget buildImage(String imagePath) {
+    if (imagePath.startsWith('http') || imagePath.startsWith('https')) {
+      return Image.network(
+        imagePath,
+        fit: BoxFit.fill,
+        loadingBuilder: (context, child, progress) {
+          if (progress == null) return child;
+          return const Center(child: CircularProgressIndicator());
+        },
+        errorBuilder: (context, error, stackTrace) {
+          return const Icon(Icons.error, color: Colors.red);
+        },
+      );
+    } else {
+      return Image.asset(
+        imagePath,
+        fit: BoxFit.fill,
+        errorBuilder: (context, error, stackTrace) {
+          return const Icon(Icons.broken_image, color: Colors.red);
+        },
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final panutan = MediaQuery.of(context).size.width;
@@ -220,7 +262,7 @@ class _OptionFromAnswerState extends State<OptionFromAnswer> {
                 fit: BoxFit.fill,
               ),
             ),
-            child: Image.asset(widget.imgPath, fit: BoxFit.fill),
+            child: buildImage(widget.imgPath),
           ),
 
           if (checked == true)

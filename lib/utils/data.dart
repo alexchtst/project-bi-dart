@@ -1592,12 +1592,29 @@ final List<Map<String, dynamic>> storyPantaiScenes = [
   {
     "actor": "Giel",
     "dialog": "Aku mau bermain pasir dulu deh. Habis itu baru makan!",
-    "quiz": [],
+    "quiz": [
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1n_MkqQVDfpl6VJIT55k1fdJzrLbxBRKt",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=164RXHPk2mgzuiAqt8X2TIZnK5RM0wHc3",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1jGRCwAFNTL82dmfJht4x_bh2zQ_K8o0w",
+        "ans": true,
+      },
+    ],
     "arinImg": "",
-    "gielImg": "assets/images/giel-type-1.png",
+    "gielImg": "assets/images/giel-type-2.png",
     "showImageArin": "",
-    "showImageGiel": "",
-    "target": "",
+    "showImageGiel":
+        "https://drive.google.com/uc?export=view&id=1jGRCwAFNTL82dmfJht4x_bh2zQ_K8o0w",
+    "target": "bermain",
   },
   {
     "actor": "Arin",
@@ -1612,23 +1629,62 @@ final List<Map<String, dynamic>> storyPantaiScenes = [
   {
     "actor": "Giel",
     "dialog": "Arin, kamu tahu nggak, di mana tempat makan yang enak di sini?",
-    "quiz": [],
+    "quiz": [
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1MZQc7Urg58S1wU5VZeZ1PEBZXqsjGuFk",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1wYfTCmqeg1AEKR8YRWyBT1VQL1LrPKLX",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1RdG0NTB9kzZxJihXHJ5uR6C8T5EIUe7R",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1wH4yvxb9EmfUMw6R-2A81UQIM3tYEMHP",
+        "ans": true,
+      },
+    ],
     "arinImg": "",
-    "gielImg": "assets/images/giel-type-1.png",
+    "gielImg": "assets/images/giel-type-2.png",
     "showImageArin": "",
-    "showImageGiel": "",
-    "target": "",
+    "showImageGiel":
+        "https://drive.google.com/uc?export=view&id=1RdG0NTB9kzZxJihXHJ5uR6C8T5EIUe7R",
+    "target": "di mana",
   },
   {
     "actor": "Arin",
     "dialog":
         "Hmm, aku lihat tadi ada tempat makan kecil di dekat pohon kelapa. Mungkin di situ~",
-    "quiz": [],
-    "arinImg": "assets/images/arin-type-1.png",
+    "quiz": [
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1guX3ac_sPjLpzT9lleRiwMJ3bnhYYYL9",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1qVbY_jK1mxBN0V2IN6GP7-AnIAhphoKN",
+        "ans": true,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1FxzMp8SAv5xz4HcYg7v1xw2M59b1T8Xr",
+        "ans": false,
+      },
+    ],
+    "arinImg": "assets/images/arin-type-2.png",
     "gielImg": "",
-    "showImageArin": "",
+    "showImageArin":
+        "https://drive.google.com/uc?export=view&id=1qVbY_jK1mxBN0V2IN6GP7-AnIAhphoKN",
     "showImageGiel": "",
-    "target": "",
+    "target": "makan",
   },
   {
     "actor": "Giel",
@@ -1654,22 +1710,62 @@ final List<Map<String, dynamic>> storyPantaiScenes = [
   {
     "actor": "Giel",
     "dialog": "Hehe, ide bagus!",
-    "quiz": [],
+    "quiz": [
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1a6QVlauXd210LLG7M4-6ksvy8SLKkxyt",
+        "ans": true,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1n_MkqQVDfpl6VJIT55k1fdJzrLbxBRKt",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=164RXHPk2mgzuiAqt8X2TIZnK5RM0wHc3",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1jGRCwAFNTL82dmfJht4x_bh2zQ_K8o0w",
+        "ans": false,
+      },
+    ],
     "arinImg": "",
-    "gielImg": "assets/images/giel-type-1.png",
+    "gielImg": "assets/images/giel-type-2.png",
     "showImageArin": "",
-    "showImageGiel": "",
-    "target": "",
+    "showImageGiel":
+        "https://drive.google.com/uc?export=view&id=1a6QVlauXd210LLG7M4-6ksvy8SLKkxyt",
+    "target": "bagus",
   },
   {
     "actor": "Giel",
     "dialog": "Oh iya, kamu tahu nggak harga nasi goreng di sini berapa?",
-    "quiz": [],
+    "quiz": [
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1guX3ac_sPjLpzT9lleRiwMJ3bnhYYYL9",
+        "ans": false,
+      },
+      // {"image": "https://drive.google.com/uc?export=view&id=1wYfTCmqeg1AEKR8YRWyBT1VQL1LrPKLX", "ans": true},
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1RdG0NTB9kzZxJihXHJ5uR6C8T5EIUe7R",
+        "ans": true,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1RdG0NTB9kzZxJihXHJ5uR6C8T5EIUe7R",
+        "ans": false,
+      },
+    ],
     "arinImg": "",
-    "gielImg": "assets/images/giel-type-1.png",
+    "gielImg": "assets/images/giel-type-2.png",
     "showImageArin": "",
-    "showImageGiel": "",
-    "target": "",
+    "showImageGiel":
+        "https://drive.google.com/uc?export=view&id=1wYfTCmqeg1AEKR8YRWyBT1VQL1LrPKLX",
+    "target": "berapa",
   },
   {
     "actor": "Arin",
@@ -1727,12 +1823,34 @@ final List<Map<String, dynamic>> storyMonkeyScenes = [
   {
     "actor": "Arin",
     "dialog": "Hari ini kita jalan-jalan ke mana, ya?",
-    "quiz": [],
-    "arinImg": "assets/images/arin-type-1.png",
+    "quiz": [
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1wYfTCmqeg1AEKR8YRWyBT1VQL1LrPKLX",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1guX3ac_sPjLpzT9lleRiwMJ3bnhYYYL9",
+        "ans": true,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1RdG0NTB9kzZxJihXHJ5uR6C8T5EIUe7R",
+        "ans": true,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1wH4yvxb9EmfUMw6R-2A81UQIM3tYEMHP",
+        "ans": false,
+      },
+    ],
+    "arinImg": "assets/images/arin-type-2.png",
     "gielImg": "assets/images/giel-type-1.png",
-    "showImageArin": "",
+    "showImageArin":
+        "https://drive.google.com/uc?export=view&id=1guX3ac_sPjLpzT9lleRiwMJ3bnhYYYL9",
     "showImageGiel": "",
-    "target": "",
+    "target": "jalan jalan",
   },
   {
     "actor": "Giel",
@@ -1760,7 +1878,7 @@ final List<Map<String, dynamic>> storyMonkeyScenes = [
         "Iya, tapi hati-hati ya, Arin. Katanya monyetnya suka iseng ambil topi atau makanan",
     "quiz": [],
     "arinImg": "assets/images/arin-type-1.png",
-    "gielImg": "assets/images/giel-type-2.png",
+    "gielImg": "assets/images/giel-type-1.png",
     "showImageArin": "",
     "showImageGiel": "",
     "target": "",
@@ -1819,12 +1937,29 @@ final List<Map<String, dynamic>> storyMonkeyScenes = [
   {
     "actor": "Giel",
     "dialog": "Iya! Aku lihat juga. Mereka pakai BISINDO, kan?",
-    "quiz": [],
+    "quiz": [
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1jGRCwAFNTL82dmfJht4x_bh2zQ_K8o0w",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1-dKIzZUvGUuA4te6nwMMOl8AxwR5qvJ_",
+        "ans": true,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1j3ZO-QiIAxTSB_31ZnJYG6uBMF3t17TP",
+        "ans": false,
+      },
+    ],
     "arinImg": "assets/images/arin-type-1.png",
-    "gielImg": "assets/images/giel-type-1.png",
+    "gielImg": "assets/images/giel-type-2.png",
     "showImageArin": "",
-    "showImageGiel": "",
-    "target": "",
+    "showImageGiel":
+        "https://drive.google.com/uc?export=view&id=1-dKIzZUvGUuA4te6nwMMOl8AxwR5qvJ_",
+    "target": "BISINDO",
   },
   {
     "actor": "Arin",
@@ -1840,12 +1975,29 @@ final List<Map<String, dynamic>> storyMonkeyScenes = [
     "actor": "Giel",
     "dialog":
         "Aku jadi pengen belajar lagi deh, biar bisa komunikasi sama teman tunarungu juga.",
-    "quiz": [],
+    "quiz": [
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1n_MkqQVDfpl6VJIT55k1fdJzrLbxBRKt",
+        "ans": true,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=164RXHPk2mgzuiAqt8X2TIZnK5RM0wHc3",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1j3ZO-QiIAxTSB_31ZnJYG6uBMF3t17TP",
+        "ans": false,
+      },
+    ],
     "arinImg": "assets/images/arin-type-1.png",
-    "gielImg": "assets/images/giel-type-1.png",
+    "gielImg": "assets/images/giel-type-2.png",
     "showImageArin": "",
-    "showImageGiel": "",
-    "target": "",
+    "showImageGiel":
+        "https://drive.google.com/uc?export=view&id=1n_MkqQVDfpl6VJIT55k1fdJzrLbxBRKt",
+    "target": "belajar",
   },
   {
     "actor": "Arin",
@@ -1913,12 +2065,34 @@ final List<Map<String, dynamic>> storyWarungScenes = [
   {
     "actor": "giel",
     "dialog": "Iya, penjualnya juga kelihatan ramah banget.",
-    "quiz": [],
+    "quiz": [
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1wYfTCmqeg1AEKR8YRWyBT1VQL1LrPKLX",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1RdG0NTB9kzZxJihXHJ5uR6C8T5EIUe7R",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1wH4yvxb9EmfUMw6R-2A81UQIM3tYEMHP",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1j3ZO-QiIAxTSB_31ZnJYG6uBMF3t17TP",
+        "ans": true,
+      },
+    ],
     "arinImg": "assets/images/arin-type-1.png",
-    "gielImg": "assets/images/giel-type-1.png",
+    "gielImg": "assets/images/giel-type-2.png",
     "showImageArin": "",
-    "showImageGiel": "",
-    "target": "",
+    "showImageGiel":
+        "https://drive.google.com/uc?export=view&id=1j3ZO-QiIAxTSB_31ZnJYG6uBMF3t17TP",
+    "target": "ramah",
   },
   {
     "actor": "Arin",
@@ -1964,12 +2138,34 @@ final List<Map<String, dynamic>> storyWarungScenes = [
     "actor": "Arin",
     "dialog":
         "Katanya mereka masak pakai bumbu khas Bali, makanya aromanya enak banget!",
-    "quiz": [],
-    "arinImg": "assets/images/giel-type-1.png",
+    "quiz": [
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1wYfTCmqeg1AEKR8YRWyBT1VQL1LrPKLX",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1RdG0NTB9kzZxJihXHJ5uR6C8T5EIUe7R",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=13RNpZUULHFxkri1cfgukeqSb5lPWJSBd",
+        "ans": true,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1j3ZO-QiIAxTSB_31ZnJYG6uBMF3t17TP",
+        "ans": false,
+      },
+    ],
+    "arinImg": "assets/images/giel-type-2.png",
     "gielImg": "assets/images/giel-type-1.png",
     "showImageArin": "",
-    "showImageGiel": "",
-    "target": "",
+    "showImageGiel":
+        "https://drive.google.com/uc?export=view&id=13RNpZUULHFxkri1cfgukeqSb5lPWJSBd",
+    "target": "masak",
   },
   {
     "actor": "giel",
@@ -1985,12 +2181,34 @@ final List<Map<String, dynamic>> storyWarungScenes = [
     "actor": "Arin",
     "dialog":
         "Kamu pasti cepat bisa, Giel! Soalnya kamu pintar banget belajar hal baru.",
-    "quiz": [],
-    "arinImg": "assets/images/arin-type-1.png",
+    "quiz": [
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1sEOLbWqo8SWoVYry6aAJktJ2cIjdGScf",
+        "ans": true,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1RdG0NTB9kzZxJihXHJ5uR6C8T5EIUe7R",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=13RNpZUULHFxkri1cfgukeqSb5lPWJSBd",
+        "ans": false,
+      },
+      {
+        "image":
+            "https://drive.google.com/uc?export=view&id=1j3ZO-QiIAxTSB_31ZnJYG6uBMF3t17TP",
+        "ans": false,
+      },
+    ],
+    "arinImg": "assets/images/arin-type-2.png",
     "gielImg": "assets/images/giel-type-1.png",
-    "showImageArin": "",
+    "showImageArin":
+        "https://drive.google.com/uc?export=view&id=1sEOLbWqo8SWoVYry6aAJktJ2cIjdGScf",
     "showImageGiel": "",
-    "target": "",
+    "target": "pintar",
   },
   {
     "actor": "giel",
