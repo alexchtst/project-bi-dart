@@ -231,7 +231,7 @@ class _InfoScreenState extends State<InfoScreen> {
                   text: TextSpan(
                     children: parseBoldText(
                       'Apabila ada kendala dalam penggunaan aplikasi atau pertanyaan lebih lanjut, '
-                      'dapat menghubungi email *syndo.eduapp@gmai.com*',
+                      'dapat menghubungi email *syndo.eduapp@gmail.com*',
                       baseStyle,
                       boldStyle,
                     ),

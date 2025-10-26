@@ -83,11 +83,11 @@ class _SkinReviewState extends State<SkinReview> {
                     height: screenWidth * 0.30,
                   ),
 
-                  Icon(
-                    Icons.center_focus_weak_sharp,
-                    color: Colors.white,
-                    size: screenWidth * 0.1,
-                  ),
+                  // Icon(
+                  //   Icons.center_focus_weak_sharp,
+                  //   color: Colors.white,
+                  //   size: screenWidth * 0.1,
+                  // ),
                 ],
               ),
             ),

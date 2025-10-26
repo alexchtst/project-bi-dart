@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:syndo/widgets/button/navigation_button.dart';
-import 'package:syndo/widgets/quiz/optionword.dart';
+import 'package:syndo/widgets/fillin/optionword.dart';
 
 class QuizFillinwordboard extends StatelessWidget {
   const QuizFillinwordboard({
@@ -72,7 +72,7 @@ class QuizFillinwordboard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  QuizOptionWord(
+                  QuizFillinOptionWord(
                     optionValue: options[0],
                     answerIndex: answerindex,
                     currentIndex: 0,
@@ -80,7 +80,7 @@ class QuizFillinwordboard extends StatelessWidget {
                     onAnswerSelected: onAnswerSelected,
                   ),
                   SizedBox(width: panutan * 0.025),
-                  QuizOptionWord(
+                  QuizFillinOptionWord(
                     optionValue: options[1],
                     answerIndex: answerindex,
                     currentIndex: 1,
@@ -88,7 +88,7 @@ class QuizFillinwordboard extends StatelessWidget {
                     onAnswerSelected: onAnswerSelected,
                   ),
                   SizedBox(width: panutan * 0.025),
-                  QuizOptionWord(
+                  QuizFillinOptionWord(
                     optionValue: options[2],
                     answerIndex: answerindex,
                     currentIndex: 2,

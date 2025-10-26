@@ -46,7 +46,7 @@ class FillBlank extends StatelessWidget {
                 borderRadius: BorderRadius.circular(5.0),
               ),
               child: Text(
-                'FILL IN THE BLANK SPACE',
+                'ISI BAGIAN KOSONG',
                 style: TextStyle(
                   fontFamily: 'Chewy',
                   fontSize: MediaQuery.of(context).size.width * 0.025,

@@ -17,10 +17,10 @@ class QuizFillinOptionWord extends StatefulWidget {
   final Function(int userAns, int ans) onAnswerSelected;
 
   @override
-  State<QuizFillinOptionWord> createState() => _QuizOptionState();
+  State<QuizFillinOptionWord> createState() => _QuizFillinOptionWordState();
 }
 
-class _QuizOptionState extends State<QuizFillinOptionWord> {
+class _QuizFillinOptionWordState extends State<QuizFillinOptionWord> {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -31,23 +31,13 @@ class _QuizOptionState extends State<QuizFillinOptionWord> {
           onTap: () {
             widget.onAnswerSelected(widget.currentIndex, widget.answerIndex);
           },
-          child: Container(
-            width: MediaQuery.of(context).size.width * 0.2,
-            height: MediaQuery.of(context).size.width * 0.05,
+          child: 
+          Container(
+            width: MediaQuery.of(context).size.width * 0.16,
             alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255, 255, 212, 65),
-              borderRadius: BorderRadius.circular(20.0),
-            ),
-            child: Text(
+            child: Image.asset(
               widget.optionValue,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 32,
-                color: Colors.white,
-                fontFamily: 'Baloo',
-              ),
+              fit: BoxFit.fill,
             ),
           ),
         ),
