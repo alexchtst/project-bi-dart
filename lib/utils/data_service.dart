@@ -10,6 +10,7 @@ class DataCard {
   final String type;
   final String name;
   final bool isLocked;
+  final String code;
   final String imgPath;
   final String region;
 
@@ -17,6 +18,7 @@ class DataCard {
     required this.type,
     required this.name,
     required this.isLocked,
+    required this.code,
     required this.imgPath,
     required this.region,
   });
@@ -37,6 +39,7 @@ class DataCard {
       type: json['type'] ?? '',
       name: json['name'] ?? '',
       isLocked: json['isLocked'] ?? false,
+      code: json['code'] ?? '',
       imgPath: json['imgPath'] ?? '',
       region: json['region'] ?? '',
     );
@@ -47,6 +50,7 @@ class DataCard {
     String? type,
     String? name,
     bool? isLocked,
+    String? code,
     String? imgPath,
     String? region,
   }) {
@@ -54,6 +58,7 @@ class DataCard {
       type: type ?? this.type,
       name: name ?? this.name,
       isLocked: isLocked ?? this.isLocked,
+      code: code ?? this.code,
       imgPath: imgPath ?? this.imgPath,
       region: region ?? this.region,
     );
@@ -225,20 +230,23 @@ class DataProvider extends ChangeNotifier {
         type: "scanoption",
         name: "Sumatera",
         isLocked: false,
+        code: "sumatera",
         imgPath: 'assets/images/sumatera.png',
         region: "smtr",
       ),
       DataCard(
         type: "scanoption",
         name: "Bali",
-        isLocked: false,
+        isLocked: true,
+        code: "bali",
         imgPath: 'assets/images/bali.png',
         region: "bali",
       ),
       DataCard(
         type: "scanoption",
         name: "Jawa",
-        isLocked: false,
+        isLocked: true,
+        code: "jawa",
         imgPath: 'assets/images/jawa.png',
         region: "jawa",
       ),
@@ -246,6 +254,7 @@ class DataProvider extends ChangeNotifier {
         type: "studyoption",
         name: "PASAR",
         isLocked: false,
+        code: "",
         imgPath: 'assets/images/berkuliner.png',
         region: "jawa",
       ),
@@ -253,6 +262,7 @@ class DataProvider extends ChangeNotifier {
         type: "studyoption",
         name: "MUSEUM",
         isLocked: false,
+        code: "",
         imgPath: 'assets/images/berwisata.png',
         region: "jawa",
       ),
@@ -260,6 +270,7 @@ class DataProvider extends ChangeNotifier {
         type: "studyoption",
         name: "BERWISATA JAKARTA",
         isLocked: false,
+        code: "",
         imgPath:
             'https://drive.google.com/uc?export=view&id=1SZJfbpElkL0kwzS4J4Xxbj7IMnrXDCBX',
         region: "jawa",
@@ -268,6 +279,7 @@ class DataProvider extends ChangeNotifier {
         type: "studyoption",
         name: "WARUNG SATE",
         isLocked: false,
+        code: "",
         imgPath: 'assets/images/bersosial.png',
         region: "bali",
       ),
@@ -275,6 +287,7 @@ class DataProvider extends ChangeNotifier {
         type: "studyoption",
         name: "PANTAI",
         isLocked: false,
+        code: "",
         imgPath:
             'https://drive.google.com/uc?export=view&id=1dAFWyX8O_WRk0vBhwAkH6H6RqiffPOYB',
         region: "bali",
@@ -283,6 +296,7 @@ class DataProvider extends ChangeNotifier {
         type: "studyoption",
         name: "MONKEY FOREST",
         isLocked: false,
+        code: "",
         imgPath:
             'https://drive.google.com/uc?export=view&id=1rbJ9_rqV9wQ-shP5DDhpgA1pU1BuztKA',
         region: "bali",
@@ -291,6 +305,7 @@ class DataProvider extends ChangeNotifier {
         type: "studyoption",
         name: "TAMAN",
         isLocked: false,
+        code: "",
         imgPath:
             'https://drive.google.com/uc?export=view&id=1Q3ZnBmFoLsYl86ZDWA96uo8JeQDc3Y9-',
 
@@ -300,6 +315,7 @@ class DataProvider extends ChangeNotifier {
         type: "studyoption",
         name: "ZOO",
         isLocked: false,
+        code: "",
         imgPath:
             'https://drive.google.com/uc?export=view&id=1sDjFrENwKfn_ONFCtNYXJWiQ9Mm6uIzC',
         region: "smtr",
@@ -370,21 +386,18 @@ class DataProvider extends ChangeNotifier {
     }
   }
 
-  // Unlock card by name
   Future<bool> unlockCard(String name) async {
     try {
-      int index = _studyCards.indexWhere((card) => card.name == name);
+      int index = _studyCards.indexWhere((card) => card.code == name);
 
       if (index != -1 && _studyCards[index].isLocked) {
         DataCard updatedCard = _studyCards[index].copyWith(isLocked: false);
         await updateStudyCard(index, updatedCard);
-        notifyListeners(); // Pastikan UI ter-update
-        return true; // Berhasil unlock
+        notifyListeners();
+        return true;
       } else if (index != -1 && !_studyCards[index].isLocked) {
-        // Card ditemukan tapi sudah unlocked
         return false;
       } else {
-        // Card tidak ditemukan
         return false;
       }
     } catch (e) {

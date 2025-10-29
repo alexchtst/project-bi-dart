@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:qr_code_scanner_plus/qr_code_scanner_plus.dart';
 import 'dart:io';
 import 'package:provider/provider.dart';
-import 'package:syndo/screen/tutorial.dart';
+// import 'package:syndo/screen/tutorial.dart';
 import 'package:syndo/utils/data_service.dart';
 
 class Scan extends StatefulWidget {
@@ -183,58 +183,47 @@ class _ScanState extends State<Scan> {
   }
 
   void _processQRResult(String code) {
-    final dataProvider = Provider.of<DataProvider>(context, listen: false);      
-
-    if (code.contains('SCAN-KARTU')) {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('Berhasil Membuka Kartu: $code')));
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const Tutorial()),
-      );
-      } else {
-      dataProvider
-          .unlockCard(code.toString())
-          .then((success) {
-            if (success) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text('Card "$code" berhasil di-unlock!'),
-                  backgroundColor: Colors.green,
-                ),
-              );
-              Navigator.of(context).pop();
-            } else {
-              if (dataProvider.error!.isNotEmpty) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text('Error: ${dataProvider.error}'),
-                    backgroundColor: Colors.red,
-                  ),
-                );
-              } else {
-                // Card tidak ditemukan atau sudah unlocked
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(
-                      'Card "$code" tidak ditemukan atau sudah unlocked',
-                    ),
-                    backgroundColor: Colors.orange,
-                  ),
-                );
-              }
-            }
-          })
-          .catchError((error) {
+    final dataProvider = Provider.of<DataProvider>(context, listen: false);
+    dataProvider
+        .unlockCard(code.toString())
+        .then((success) {
+          if (success) {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: Text('Gagal unlock card'),
-                backgroundColor: Colors.red,
+                content: Text('Card "$code" berhasil di-unlock!'),
+                backgroundColor: Colors.green,
               ),
             );
-          });
-    }
+            Navigator.of(context).pop();
+          } else {
+            if (dataProvider.error!.isNotEmpty) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('Error: ${dataProvider.error}'),
+                  backgroundColor: Colors.red,
+                ),
+              );
+            } else {
+              // Card tidak ditemukan atau sudah unlocked
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(
+                    'Card "$code" tidak ditemukan atau sudah unlocked',
+                  ),
+                  backgroundColor: Colors.orange,
+                ),
+              );
+            }
+          }
+        })
+        .catchError((error) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('Gagal unlock card'),
+              backgroundColor: Colors.red,
+            ),
+          );
+        });
   }
 
   void _onPermissionSet(BuildContext context, QRViewController ctrl, bool p) {

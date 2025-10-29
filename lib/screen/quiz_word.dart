@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:syndo/utils/game_data.dart';
+import 'package:syndo/utils/audio_service.dart';
 import 'package:syndo/widgets/quiz/quizwordboard.dart';
 
 class QuizWord extends StatefulWidget {
@@ -12,6 +13,8 @@ class QuizWord extends StatefulWidget {
 }
 
 class _QuizWordState extends State<QuizWord> {
+  final AudioService _audioService = AudioService();
+
   int counter = 0;
   int currentQuest = 0;
   bool isAnswered = false;
@@ -20,6 +23,9 @@ class _QuizWordState extends State<QuizWord> {
     if (!isAnswered) {
       if (userAns == ans) {
         counter += 1;
+        _audioService.playTrue();
+      } else {
+        _audioService.playWrong();
       }
       setState(() {
         isAnswered = true;

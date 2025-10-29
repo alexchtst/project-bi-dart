@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:syndo/utils/game_data.dart';
 import 'package:syndo/widgets/fillin/quizwordboard.dart';
+import 'package:syndo/utils/audio_service.dart';
 
 class FillintheblankWord extends StatefulWidget {
   const FillintheblankWord({super.key, required this.questbundle});
@@ -12,6 +13,8 @@ class FillintheblankWord extends StatefulWidget {
 }
 
 class _FillintheblankWordState extends State<FillintheblankWord> {
+  final AudioService _audioService = AudioService();
+
   int counter = 0;
   int currentQuest = 0;
   bool isAnswered = false;
@@ -19,6 +22,9 @@ class _FillintheblankWordState extends State<FillintheblankWord> {
     if (!isAnswered) {
       if (userAns == ans) {
         counter += 1;
+        _audioService.playTrue();
+      } else {
+        _audioService.playWrong();
       }
       setState(() {
         isAnswered = true;
@@ -70,8 +76,7 @@ class _FillintheblankWordState extends State<FillintheblankWord> {
                         answerindex:
                             widget.questbundle[currentQuest]["answerindex"],
                         questions:
-                            widget
-                                .questbundle[currentQuest]["questions"],
+                            widget.questbundle[currentQuest]["questions"],
                         questImageAnswer:
                             widget.questbundle[currentQuest]["questionText"],
                         questionStatus: isAnswered,

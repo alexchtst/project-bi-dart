@@ -55,7 +55,7 @@ final List<Map<String, dynamic>> questionData = [
   },
   {
     "options": ["H", "I", "J", "L"],
-    "answerindex": 3,
+    "answerindex": 2,
     "questImageQuestion": "assets/images/jquestcard.png",
     "questImageAnswer": "assets/images/jcard.png",
   },
@@ -2412,7 +2412,7 @@ final List<Map<String, dynamic>> questionFillinData = [
   },
   {
     "options": [
-      "assets/images/squestcard.png",
+      "assets/images/iquestcard.png",
       "assets/images/wquestcard.png",
       "assets/images/rquestcard.png",
     ],

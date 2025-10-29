@@ -287,6 +287,9 @@ flutter:
     - assets/images/story-smtr-anggur.png
 
     - assets/audio/BACKSOUND_GAMELAN_INDONESIAN_MUSIC_ETHNIC_CULTURE.mp3
+    - assets/audio/new-information.mp3
+    - assets/audio/sonido-correcto.mp3
+    - assets/audio/wrong-buzzer.mp3
 
     - assets/video/IMG_3096.mp4
     
